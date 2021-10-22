@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7706df5-9497-475f-88d8-0c870cbdbbee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Swim_Bot.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b7706df5-9497-475f-88d8-0c870cbdbbee" name="Changes" comment="Config Files + Diagram&#10;&#10;- Config Files Added from Pycharm&#10;- Diagram from lucid chart showing initial thoughts of the project" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,6 +55,21 @@
       <option name="presentableId" value="Default" />
       <updated>1634925787801</updated>
     </task>
+    <task id="LOCAL-00001" summary="Config Files + Diagram&#10;&#10;- Config Files Added from Pycharm&#10;- Diagram from lucid chart showing initial thoughts of the project">
+      <created>1634927527943</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1634927527943</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Config Files + Diagram&#10;&#10;- Config Files Added from Pycharm&#10;- Diagram from lucid chart showing initial thoughts of the project">
+      <created>1634927538362</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1634927538363</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -74,5 +82,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Config Files + Diagram&#10;&#10;- Config Files Added from Pycharm&#10;- Diagram from lucid chart showing initial thoughts of the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Config Files + Diagram&#10;&#10;- Config Files Added from Pycharm&#10;- Diagram from lucid chart showing initial thoughts of the project" />
   </component>
 </project>
