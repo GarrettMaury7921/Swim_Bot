@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7706df5-9497-475f-88d8-0c870cbdbbee" name="Changes" comment="Start the bot by noticing when the Runeterra main menu shows up">
+    <list default="true" id="b7706df5-9497-475f-88d8-0c870cbdbbee" name="Changes" comment="Basic Return the mouse coordinates after a decision&#10;&#10;- Prompts the user of what to do&#10;- Knows when the main menu is open&#10;- Returns position of mouse">
+      <change afterPath="$PROJECT_DIR$/constants1080p.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image_assets/main_menu/main_menu.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image_assets/main_menu/main_menu2.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image_assets/main_menu/main_menu3.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image_assets/play_button/ai_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image_assets/play_button/confirm_play.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_assets/main_menu.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_assets/main_menu2.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_assets/main_menu3.PNG" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/startup.py" beforeDir="false" afterPath="$PROJECT_DIR$/startup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,12 +31,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1zs9AuWuTqH2roIox8eQw9Zu07C" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -102,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634937314528</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Basic Return the mouse coordinates after a decision&#10;&#10;- Prompts the user of what to do&#10;- Knows when the main menu is open&#10;- Returns position of mouse">
+      <created>1634941731972</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1634941731972</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -118,9 +137,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Config Files + Diagram&#10;&#10;- Config Files Added from Pycharm&#10;- Diagram from lucid chart showing initial thoughts of the project" />
     <MESSAGE value="Testing GitHub" />
     <MESSAGE value="Start the bot by noticing when the Runeterra main menu shows up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start the bot by noticing when the Runeterra main menu shows up" />
+    <MESSAGE value="Basic Return the mouse coordinates after a decision&#10;&#10;- Prompts the user of what to do&#10;- Knows when the main menu is open&#10;- Returns position of mouse" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic Return the mouse coordinates after a decision&#10;&#10;- Prompts the user of what to do&#10;- Knows when the main menu is open&#10;- Returns position of mouse" />
   </component>
 </project>
