@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7706df5-9497-475f-88d8-0c870cbdbbee" name="Changes" comment="Testing GitHub">
-      <change afterPath="$PROJECT_DIR$/startup.py" afterDir="false" />
+    <list default="true" id="b7706df5-9497-475f-88d8-0c870cbdbbee" name="Changes" comment="Start the bot by noticing when the Runeterra main menu shows up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/startup.py" beforeDir="false" afterPath="$PROJECT_DIR$/startup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634928622277</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Start the bot by noticing when the Runeterra main menu shows up">
+      <created>1634937314528</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1634937314528</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,6 +120,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Config Files + Diagram&#10;&#10;- Config Files Added from Pycharm&#10;- Diagram from lucid chart showing initial thoughts of the project" />
     <MESSAGE value="Testing GitHub" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing GitHub" />
+    <MESSAGE value="Start the bot by noticing when the Runeterra main menu shows up" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start the bot by noticing when the Runeterra main menu shows up" />
   </component>
 </project>
