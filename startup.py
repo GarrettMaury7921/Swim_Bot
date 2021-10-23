@@ -20,11 +20,10 @@ def main_menu_starter():
                 or pyautogui.locateOnScreen('image_assets/main_menu/main_menu2.png', confidence=.9) \
                 or pyautogui.locateOnScreen('image_assets/main_menu/main_menu3.png', confidence=.9) is not None:
             print('I can see the main menu!')
-            _input()  # Await for input from the user
             time.sleep(0.4)
-            break
+            return True
         else:
-            print('I cannot see it...')
+            print('I cannot see the main menu...')
             time.sleep(0.4)
 
 
@@ -37,9 +36,8 @@ def _input():
         print('1. Play an AI game')
         cmdinput = input()
         if cmdinput == '1':
-            print('Sleeping for 5, click the main menu...')
-            play_ai_game()
-            loop = False  # Break the loop, a decision has been made
+            print('Sleeping for 3, click the main menu...')
+            return False  # Break the loop
         else:
             print('Bad Input, try again')
             continue
@@ -47,10 +45,26 @@ def _input():
 
 # When input 1 (Play an AI game) is selected
 def play_ai_game():
-    time.sleep(5)  # Sleep for 5
+    time.sleep(3)  # Sleep
 
     pyautogui.moveTo(constants1080p.MOUSE_POSITION_PLAY_X, constants1080p.MOUSE_POSITION_PLAY_Y)
     pyautogui.leftClick()
 
     time.sleep(0.25)  # Load Time
     controls.look_for_play_button_assets('confirm_play.png')
+
+    while True:
+        # Check if Ai button is already selected
+        if controls.look_for_play_button_assets('confirm_ai_button.png') is True:
+            # time.sleep(0.3)
+            # Select Deck
+            return True
+        elif controls.look_for_play_button_assets('confirm_ai_button.png') is not True:
+            pyautogui.moveTo(constants1080p.MOUSE_POSITION_AI_BUTTON_X, constants1080p.MOUSE_POSITION_AI_BUTTON_Y)
+            pyautogui.leftClick()
+            return True
+
+
+# When it is time to select a deck
+def deck_selector():
+    print('deck time')
