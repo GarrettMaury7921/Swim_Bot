@@ -35,7 +35,7 @@ def look_for_play_button_assets(pic):
 
 
 def click_home_button():
-    pyautogui.moveTo(constants1080p.MOUSE_POSITION_HOME_X, constants1080p.MOUSE_POSITION_HOME_Y)
+    pyautogui.moveTo(constants1080p.MOUSE_POSITION_HOME_X, constants1080p.MOUSE_POSITION_HOME_Y, 2)  # 2 seconds
     pyautogui.leftClick()
 
 

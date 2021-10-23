@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7706df5-9497-475f-88d8-0c870cbdbbee" name="Changes" comment="BIG UPDATE&#10;&#10;New Classes:&#10; - constants1080p.py&#10; - controls.py&#10; &#10;New Directories&#10; - updated names&#10; &#10; Prompts user to enter what to do, if user wants an AI game, it clicks the button. Then confirms if it has seen it.">
-      <change afterPath="$PROJECT_DIR$/image_assets/play_button/confirm_ai_button.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants1080p.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants1080p.py" afterDir="false" />
+    <list default="true" id="b7706df5-9497-475f-88d8-0c870cbdbbee" name="Changes" comment="10/22 Big Code Update&#10;&#10;- AI knows how to get to the part where it needs to select a deck&#10;- Updates to every python file&#10;- Updates to how the code functions (main)&#10;- Some error handling (or handling different situations)&#10;- Updated constants1080p.py&#10;- Updated controls.py">
       <change beforePath="$PROJECT_DIR$/controls.py" beforeDir="false" afterPath="$PROJECT_DIR$/controls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/startup.py" beforeDir="false" afterPath="$PROJECT_DIR$/startup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634944718341</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="10/22 Big Code Update&#10;&#10;- AI knows how to get to the part where it needs to select a deck&#10;- Updates to every python file&#10;- Updates to how the code functions (main)&#10;- Some error handling (or handling different situations)&#10;- Updated constants1080p.py&#10;- Updated controls.py">
+      <created>1634948487087</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1634948487087</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,6 +147,7 @@
     <MESSAGE value="Start the bot by noticing when the Runeterra main menu shows up" />
     <MESSAGE value="Basic Return the mouse coordinates after a decision&#10;&#10;- Prompts the user of what to do&#10;- Knows when the main menu is open&#10;- Returns position of mouse" />
     <MESSAGE value="BIG UPDATE&#10;&#10;New Classes:&#10; - constants1080p.py&#10; - controls.py&#10; &#10;New Directories&#10; - updated names&#10; &#10; Prompts user to enter what to do, if user wants an AI game, it clicks the button. Then confirms if it has seen it." />
-    <option name="LAST_COMMIT_MESSAGE" value="BIG UPDATE&#10;&#10;New Classes:&#10; - constants1080p.py&#10; - controls.py&#10; &#10;New Directories&#10; - updated names&#10; &#10; Prompts user to enter what to do, if user wants an AI game, it clicks the button. Then confirms if it has seen it." />
+    <MESSAGE value="10/22 Big Code Update&#10;&#10;- AI knows how to get to the part where it needs to select a deck&#10;- Updates to every python file&#10;- Updates to how the code functions (main)&#10;- Some error handling (or handling different situations)&#10;- Updated constants1080p.py&#10;- Updated controls.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="10/22 Big Code Update&#10;&#10;- AI knows how to get to the part where it needs to select a deck&#10;- Updates to every python file&#10;- Updates to how the code functions (main)&#10;- Some error handling (or handling different situations)&#10;- Updated constants1080p.py&#10;- Updated controls.py" />
   </component>
 </project>
