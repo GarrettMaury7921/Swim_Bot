@@ -47,8 +47,8 @@ def _input():
 def play_ai_game():
     time.sleep(3)  # Sleep
 
-    # Move mouse here in 2 seconds
-    pyautogui.moveTo(constants1080p.MOUSE_POSITION_PLAY_X, constants1080p.MOUSE_POSITION_PLAY_Y, 0.7)
+    # Move mouse here in (random) seconds
+    pyautogui.moveTo(constants1080p.MOUSE_POSITION_PLAY_X, constants1080p.MOUSE_POSITION_PLAY_Y, random.random())
     pyautogui.leftClick()
 
     time.sleep(0.25)  # Load Time
@@ -61,7 +61,7 @@ def play_ai_game():
             # Select Deck
             return True
         elif controls.look_for_play_button_assets('confirm_ai_button.png') is not True:
-            pyautogui.moveTo(constants1080p.MOUSE_POSITION_AI_BUTTON_X, constants1080p.MOUSE_POSITION_AI_BUTTON_Y, 0.2)
+            pyautogui.moveTo(constants1080p.MOUSE_POSITION_AI_BUTTON_X, constants1080p.MOUSE_POSITION_AI_BUTTON_Y, random.random())
             pyautogui.leftClick()
             return True
 
