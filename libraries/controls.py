@@ -1,6 +1,6 @@
 import pyautogui
 import time
-import constants1080p
+from libraries import constants1080p
 from pynput.mouse import Button, Controller
 
 

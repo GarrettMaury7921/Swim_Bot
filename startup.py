@@ -7,9 +7,8 @@ import win32api
 import win32con
 from pynput.mouse import Button, Controller
 # Example print(constants1080p.MOUSE)
-import constants1080p
-import controls
-
+from libraries import constants1080p
+from libraries import controls
 
 # Looks for Main Menu Runeterra screen
 def main_menu_starter():
@@ -61,7 +60,8 @@ def play_ai_game():
             # Select Deck
             return True
         elif controls.look_for_play_button_assets('confirm_ai_button.png') is not True:
-            pyautogui.moveTo(constants1080p.MOUSE_POSITION_AI_BUTTON_X, constants1080p.MOUSE_POSITION_AI_BUTTON_Y, random.random())
+            pyautogui.moveTo(constants1080p.MOUSE_POSITION_AI_BUTTON_X, constants1080p.MOUSE_POSITION_AI_BUTTON_Y,
+                             random.random())
             pyautogui.leftClick()
             return True
 
