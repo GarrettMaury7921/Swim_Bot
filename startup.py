@@ -10,6 +10,7 @@ from pynput.mouse import Button, Controller
 from libraries import constants1080p
 from libraries import controls
 
+
 # Looks for Main Menu Runeterra screen
 def main_menu_starter():
     while 1:
@@ -35,8 +36,7 @@ def _input():
         print('1. Play an AI game')
         cmdinput = input()
         if cmdinput == '1':
-            print('Sleeping for 3, click the main menu...')
-            return False  # Break the loop
+            return 1  # Break the loop
         else:
             print('Bad Input, try again')
             continue
@@ -44,10 +44,11 @@ def _input():
 
 # When input 1 (Play an AI game) is selected
 def play_ai_game():
-    time.sleep(3)  # Sleep
+    print('Click the main menu in 5 seconds, ready to start.')
+    time.sleep(5)  # Sleep
 
     # Move mouse here in (random) seconds
-    pyautogui.moveTo(constants1080p.MOUSE_POSITION_PLAY_X, constants1080p.MOUSE_POSITION_PLAY_Y, random.random())
+    pyautogui.moveTo(constants1080p.MOUSE_POSITION_PLAY_X, constants1080p.MOUSE_POSITION_PLAY_Y, random.uniform(0.5, 1))
     pyautogui.leftClick()
 
     time.sleep(0.25)  # Load Time
@@ -61,7 +62,7 @@ def play_ai_game():
             return True
         elif controls.look_for_play_button_assets('confirm_ai_button.png') is not True:
             pyautogui.moveTo(constants1080p.MOUSE_POSITION_AI_BUTTON_X, constants1080p.MOUSE_POSITION_AI_BUTTON_Y,
-                             random.random())
+                             random.uniform(0.5, 1))
             pyautogui.leftClick()
             return True
 
