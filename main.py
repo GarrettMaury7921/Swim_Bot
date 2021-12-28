@@ -1,7 +1,5 @@
-import time
-from libraries import controls
+from menus import Menus
 
-print('Sleeping for 5')
-time.sleep(5)
-x, y = controls.get_cursor_position()
-print(x, y)
+# This is the main driver code of the bot
+
+initialize_menu = Menus()
