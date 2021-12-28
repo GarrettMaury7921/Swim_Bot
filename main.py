@@ -1,16 +1,7 @@
-from startup import main_menu_starter, _input, play_ai_game, deck_selector
+import time
+from libraries import controls
 
-
-def ai_game():
-    # Look for the main menu and then prompt the user of what the AI should do
-    if main_menu_starter() is True:
-        if play_ai_game() is True:  # If everything has gone right
-            deck_selector()  # Select A Deck
-
-
-if _input() == 1:  # Play AI Game
-    print('AI Game Selected, waiting for Main Menu...')
-    ai_game()
-
-# NOTES
-# Convolution 2D, use it
+print('Sleeping for 5')
+time.sleep(5)
+x, y = controls.get_cursor_position()
+print(x, y)
