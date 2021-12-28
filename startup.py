@@ -1,12 +1,6 @@
-from pyautogui import *
 import pyautogui
 import time
-import keyboard
 import random
-import win32api
-import win32con
-from pynput.mouse import Button, Controller
-# Example print(constants1080p.MOUSE)
 from libraries import constants1080p
 from libraries import controls
 

@@ -1,43 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7706df5-9497-475f-88d8-0c870cbdbbee" name="Changes" comment="Directory Changes&#10;&#10;- Moved constants1080p.py to libraries&#10;- Moved controls.py to libraries">
-      <change afterPath="$PROJECT_DIR$/image_assets/main_menu/weekly_vault_collect.png" afterDir="false" />
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/startup.py" beforeDir="false" afterPath="$PROJECT_DIR$/startup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1zs9AuWuTqH2roIox8eQw9Zu07C" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="22QTTFsSaTJIlblnUIK4NvKVLqH" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -47,9 +31,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\tf2.7.0\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
@@ -65,90 +49,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b7706df5-9497-475f-88d8-0c870cbdbbee" name="Changes" comment="" />
-      <created>1634925787801</created>
+      <changelist id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="" />
+      <created>1639768817914</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1634925787801</updated>
+      <updated>1639768817914</updated>
     </task>
-    <task id="LOCAL-00001" summary="Config Files + Diagram&#10;&#10;- Config Files Added from Pycharm&#10;- Diagram from lucid chart showing initial thoughts of the project">
-      <created>1634927527943</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1634927527943</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Config Files + Diagram&#10;&#10;- Config Files Added from Pycharm&#10;- Diagram from lucid chart showing initial thoughts of the project">
-      <created>1634927538362</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1634927538363</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Config Files + Diagram&#10;&#10;- Config Files Added from Pycharm&#10;- Diagram from lucid chart showing initial thoughts of the project">
-      <created>1634927677253</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1634927677253</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Testing GitHub">
-      <created>1634928622277</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1634928622277</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Start the bot by noticing when the Runeterra main menu shows up">
-      <created>1634937314528</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1634937314528</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Basic Return the mouse coordinates after a decision&#10;&#10;- Prompts the user of what to do&#10;- Knows when the main menu is open&#10;- Returns position of mouse">
-      <created>1634941731972</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1634941731972</updated>
-    </task>
-    <task id="LOCAL-00007" summary="BIG UPDATE&#10;&#10;New Classes:&#10; - constants1080p.py&#10; - controls.py&#10; &#10;New Directories&#10; - updated names&#10; &#10; Prompts user to enter what to do, if user wants an AI game, it clicks the button. Then confirms if it has seen it.">
-      <created>1634944718341</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1634944718341</updated>
-    </task>
-    <task id="LOCAL-00008" summary="10/22 Big Code Update&#10;&#10;- AI knows how to get to the part where it needs to select a deck&#10;- Updates to every python file&#10;- Updates to how the code functions (main)&#10;- Some error handling (or handling different situations)&#10;- Updated constants1080p.py&#10;- Updated controls.py">
-      <created>1634948487087</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1634948487087</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Mouse Movement Speed&#10;&#10;- Made it so the mouse needs to click on a button, it will travel there in a desired speed">
-      <created>1634948874519</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1634948874519</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Mouse Movement Speed&#10;&#10;- Made it so the mouse moves to button at a random speed">
-      <created>1635276437033</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1635276437033</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Directory Changes&#10;&#10;- Moved constants1080p.py to libraries&#10;- Moved controls.py to libraries">
-      <created>1635285300166</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1635285300166</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,18 +68,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Config Files + Diagram&#10;&#10;- Config Files Added from Pycharm&#10;- Diagram from lucid chart showing initial thoughts of the project" />
-    <MESSAGE value="Testing GitHub" />
-    <MESSAGE value="Start the bot by noticing when the Runeterra main menu shows up" />
-    <MESSAGE value="Basic Return the mouse coordinates after a decision&#10;&#10;- Prompts the user of what to do&#10;- Knows when the main menu is open&#10;- Returns position of mouse" />
-    <MESSAGE value="BIG UPDATE&#10;&#10;New Classes:&#10; - constants1080p.py&#10; - controls.py&#10; &#10;New Directories&#10; - updated names&#10; &#10; Prompts user to enter what to do, if user wants an AI game, it clicks the button. Then confirms if it has seen it." />
-    <MESSAGE value="10/22 Big Code Update&#10;&#10;- AI knows how to get to the part where it needs to select a deck&#10;- Updates to every python file&#10;- Updates to how the code functions (main)&#10;- Some error handling (or handling different situations)&#10;- Updated constants1080p.py&#10;- Updated controls.py" />
-    <MESSAGE value="Mouse Movement Speed&#10;&#10;- Made it so the mouse needs to click on a button, it will travel there in a desired speed" />
-    <MESSAGE value="Mouse Movement Speed&#10;&#10;- Made it so the mouse moves to button at a random speed" />
-    <MESSAGE value="Directory Changes&#10;&#10;- Moved constants1080p.py to libraries&#10;- Moved controls.py to libraries" />
-    <option name="LAST_COMMIT_MESSAGE" value="Directory Changes&#10;&#10;- Moved constants1080p.py to libraries&#10;- Moved controls.py to libraries" />
   </component>
 </project>

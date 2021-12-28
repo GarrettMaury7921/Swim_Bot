@@ -1,7 +1,6 @@
 import pyautogui
 import time
 from libraries import constants1080p
-from pynput.mouse import Button, Controller
 
 
 def look_for_main_menu_assets(pic):
@@ -37,11 +36,3 @@ def look_for_play_button_assets(pic):
 def click_home_button():
     pyautogui.moveTo(constants1080p.MOUSE_POSITION_HOME_X, constants1080p.MOUSE_POSITION_HOME_Y, 2)  # 2 seconds
     pyautogui.leftClick()
-
-
-def get_cursor_position():
-    print('Getting Cursor Position, sleeping 5 seconds')
-    time.sleep(5)
-    mouse = Controller()
-    current_mouse_position = mouse.position
-    print(current_mouse_position)

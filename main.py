@@ -8,7 +8,7 @@ def ai_game():
             deck_selector()  # Select A Deck
 
 
-if _input() is 1:  # Play AI Game
+if _input() == 1:  # Play AI Game
     print('AI Game Selected, waiting for Main Menu...')
     ai_game()
 
