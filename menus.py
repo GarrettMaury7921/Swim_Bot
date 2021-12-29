@@ -8,6 +8,7 @@ class Menus:
 
     # Attributes
     action = 0
+    deck = ''
     resolution = 0
     dimensions = ''
     main_menu_dir = 'image_assets/'
@@ -50,13 +51,15 @@ class Menus:
                 return True
             else:
                 print('Trying to find Legends of Runeterra main menu...')
-                time.sleep(3)
+                time.sleep(1)
                 continue
 
     def take_action(self):
         print('Select an Action:')
         self.action = input('1. AI Game\n')
         if int(self.action) == 1:
+            self.deck = input('What deck should I play? (Type in the name of the deck here)\n')
+
             print('Please Click on the Runeterra Client.')
             print('Playing AI Game...')
             time.sleep(3)

@@ -1,7 +1,9 @@
 from menus import Menus
+from screen_capturing import text_detection
 
 # This is the main driver code of the bot
 
 initialize_menu = Menus()
 if initialize_menu.action == '1':
-    print('deck time')
+    # Input in the selected deck
+    text_detection.detect_deck(initialize_menu.deck)
