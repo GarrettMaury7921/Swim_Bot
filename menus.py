@@ -6,15 +6,16 @@ from libraries import controls, constants1080p, constants1440p
 
 class Menus:
 
+    # Different Display Constants
+    monitor1 = (1920, 1080)
+    monitor2 = (2560, 1440)
+
     # Attributes
     action = 0
     deck = ''
     resolution = 0
     dimensions = ''
     main_menu_dir = 'image_assets/'
-    # Different Displays
-    monitor1 = (1920, 1080)
-    monitor2 = (2560, 1440)
 
     def __init__(self):
         # Startup Message
@@ -73,6 +74,7 @@ class Menus:
             pyautogui.moveTo(constants1080p.MOUSE_POSITION_PLAY_X,
                              constants1080p.MOUSE_POSITION_PLAY_Y, random.random())
             pyautogui.leftClick()
+
             # Click on AI Button
             pyautogui.moveTo(constants1080p.MOUSE_POSITION_AI_BUTTON_X,
                              constants1080p.MOUSE_POSITION_AI_BUTTON_Y, random.random())
@@ -82,6 +84,9 @@ class Menus:
             pyautogui.moveTo(constants1440p.MOUSE_POSITION_PLAY_X,
                              constants1440p.MOUSE_POSITION_PLAY_Y, random.random())
             pyautogui.leftClick()
+
+            time.sleep(0.2)
+
             # Click on AI Button
             pyautogui.moveTo(constants1440p.MOUSE_POSITION_AI_BUTTON_X,
                              constants1440p.MOUSE_POSITION_AI_BUTTON_Y, random.random())
