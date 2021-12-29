@@ -1,12 +1,13 @@
+import random
 import time
-
 import pyautogui
-from libraries import controls
+from libraries import controls, constants1080p, constants1440p
 
 
 class Menus:
 
     # Attributes
+    action = 0
     resolution = 0
     dimensions = ''
     main_menu_dir = 'image_assets/'
@@ -25,6 +26,9 @@ class Menus:
         # Find the main menu
         self.find_main_menu()
 
+        # Select Action for the bot to take
+        self.take_action()
+
     def get_resolution(self):
         if self.resolution == self.monitor2:
             self.dimensions = '2560x1440'
@@ -35,14 +39,47 @@ class Menus:
 
     def find_main_menu(self):
         # Update the main menu directory based on the dimensions of the screen
+        # image_assets/*dimensions*/main_menu/main_menu.png
+        main_menu_settings = self.main_menu_dir + self.dimensions + '/main_menu/main_menu3.png'
         self.main_menu_dir = self.main_menu_dir + self.dimensions + '/main_menu/main_menu.png'
 
         while True:
-            if pyautogui.locateOnScreen(self.main_menu_dir, confidence=.9) is not None:
+            if pyautogui.locateOnScreen(self.main_menu_dir, confidence=.9) is not None and \
+                    pyautogui.locateOnScreen(main_menu_settings, confidence=.9) is not None:
                 print('Runeterra Main Menu Found.')
                 return True
             else:
                 print('Trying to find Legends of Runeterra main menu...')
-                time.sleep(5)
+                time.sleep(3)
                 continue
 
+    def take_action(self):
+        print('Select an Action:')
+        self.action = input('1. AI Game\n')
+        if int(self.action) == 1:
+            print('Please Click on the Runeterra Client.')
+            print('Playing AI Game...')
+            time.sleep(3)
+            self.go_to_ai_game(self.dimensions)
+            return 1
+
+    @staticmethod
+    def go_to_ai_game(dimensions):
+        if str(dimensions) == '1920x1080':
+            # Click on Play Button
+            pyautogui.moveTo(constants1080p.MOUSE_POSITION_PLAY_X,
+                             constants1080p.MOUSE_POSITION_PLAY_Y, random.random())
+            pyautogui.leftClick()
+            # Click on AI Button
+            pyautogui.moveTo(constants1080p.MOUSE_POSITION_AI_BUTTON_X,
+                             constants1080p.MOUSE_POSITION_AI_BUTTON_Y, random.random())
+            pyautogui.leftClick()
+        elif str(dimensions) == '2560x1440':
+            # Click on Play Button
+            pyautogui.moveTo(constants1440p.MOUSE_POSITION_PLAY_X,
+                             constants1440p.MOUSE_POSITION_PLAY_Y, random.random())
+            pyautogui.leftClick()
+            # Click on AI Button
+            pyautogui.moveTo(constants1440p.MOUSE_POSITION_AI_BUTTON_X,
+                             constants1440p.MOUSE_POSITION_AI_BUTTON_Y, random.random())
+            pyautogui.leftClick()
