@@ -1,9 +1,9 @@
+import random
 import cv2 as cv
-from time import time, sleep
+import pyautogui
+from time import time
 from screen_capturing.window_capture import WindowCapture
-from pytesseract import pytesseract
-from threading import Thread
-
+from pytesseract import pytesseract, Output
 
 
 def detect_deck(deck, debug):
@@ -23,12 +23,13 @@ def detect_deck(deck, debug):
         screenshot = window_capture.get_screenshot()
 
         # Detect words in the screenshot to find the deck
-        detect_words(screenshot)
-
-        # resize the windows
-        output_image = cv.resize(screenshot, (900, 500))
+        deck_cords = detect_words(screenshot, selected_deck, debug)
 
         if debug is True:
+
+            # resize the windows
+            output_image = cv.resize(screenshot, (900, 500))
+
             # Display detection image
             cv.imshow('Matches', output_image)
 
@@ -43,16 +44,48 @@ def detect_deck(deck, debug):
                 cv.destroyAllWindows()
                 break
 
+        if deck_cords is not None:
+            break
 
-def detect_words(screen):
+    # Unpack the Tuple
+    deck_x, deck_y = deck_cords
+
+    # Click on the selected deck
+    pyautogui.moveTo(deck_x, deck_y, random.random())
+    pyautogui.leftClick()
+    cv.destroyAllWindows()
+
+
+# Detects words on the screen, it detects them easier if the words have spaces in between them
+# Meaning you should have multiple words for deck names
+def detect_words(screen, selected_deck, debug):
+
     # Find words in image
-    letter_boxes = pytesseract.image_to_boxes(screen)
+    image_data = pytesseract.image_to_data(screen, output_type=Output.DICT)
 
-    height, width, c = screen.shape
+    for i, word in enumerate(image_data['text']):
+        # If the word is all uppercase and doesn't contain any special characters
+        if word != "" and word.isupper() and word.isalpha():
 
-    for box in letter_boxes.splitlines():
-        box = box.split()
-        x, y, w, h = int(box[1]), int(box[2]), int(box[3]), int(box[4])
-        cv.rectangle(screen, (x, height-y), (w, height-h), (0, 0, 255), 3)
-        cv.putText(screen, box[0], (x, height-h+32), cv.FONT_HERSHEY_COMPLEX, 1, (0, 255, 0), 0.5)
+            x, y, w, h = image_data['left'][i], image_data['top'][i], image_data['width'][i], image_data['height'][i]
 
+            # Don't count words that are on the left side of the screen
+            if x < 450:
+                continue
+
+            # Center Cords for clicking for later
+            center_x = (x + (1/2) * w)
+            center_y = (y + (1/2) * h)
+
+            # Debugging = Drawing
+            if debug is True:
+                # Draw a plus where the bot needs to click the deck (center of the word)
+                cv.drawMarker(screen, (int(center_x), int(center_y)), (255, 0, 255), cv.MARKER_CROSS, markerSize=40, thickness=2)
+
+                # Draw rectangles around the words
+                cv.rectangle(screen, (x, y), (x + w, y + h), (0, 255, 0), 3)
+                cv.putText(screen, word, (x, y - 16), cv.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 2)
+
+            # If the selected deck is found, return the center cords of that deck
+            if word == selected_deck:
+                return center_x, center_y

@@ -40,6 +40,9 @@ class Menus:
         return 'Resolution Initialized. Resolution is ' + self.dimensions + '.'
 
     def find_main_menu(self):
+        # Variable for tracking if the main menu has not been found yet
+        menu_finder = False
+
         # Update the main menu directory based on the dimensions of the screen
         # image_assets/*dimensions*/main_menu/main_menu.png
         main_menu_settings = self.main_menu_dir + self.dimensions + '/main_menu/main_menu3.png'
@@ -51,8 +54,17 @@ class Menus:
                 print('Runeterra Main Menu Found.')
                 return True
             else:
-                print('Trying to find Legends of Runeterra main menu...')
-                time.sleep(1)
+                if menu_finder is True:
+                    print('.', end='')
+                    time.sleep(1)
+                    continue
+
+                print('Trying to find Legends of Runeterra main menu...', end='')
+
+                # Main menu has not been found yet, now put . at the end of the print statement
+                menu_finder = True
+
+                time.sleep(0.3)
                 continue
 
     def take_action(self):
@@ -63,7 +75,7 @@ class Menus:
 
             print('Please Click on the Runeterra Client.')
             print('Playing AI Game...')
-            time.sleep(3)
+            time.sleep(2)
             self.go_to_ai_game(self.dimensions)
             return 1
 
@@ -85,6 +97,7 @@ class Menus:
                              constants1440p.MOUSE_POSITION_PLAY_Y, random.random())
             pyautogui.leftClick()
 
+            # Sleep for a small amount due to clicks not happening sometimes
             time.sleep(0.2)
 
             # Click on AI Button
