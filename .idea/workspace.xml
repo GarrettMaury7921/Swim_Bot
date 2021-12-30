@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Threaded Window Capture Fix">
-      <change afterPath="$PROJECT_DIR$/screen_capturing/word_detector.py" afterDir="false" />
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Threaded Word Detector!!!&#10;&#10;- time.sleep() was put in to make sure things don't go too fast, fps will suffer tho&#10;- works with debug flag being true or false">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/constants1440p.py" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/constants1440p.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screen_capturing/deck_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen_capturing/deck_detection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screen_capturing/window_capture.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen_capturing/window_capture.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640897159904</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Threaded Word Detector!!!&#10;&#10;- time.sleep() was put in to make sure things don't go too fast, fps will suffer tho&#10;- works with debug flag being true or false">
+      <created>1640902506079</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1640902506079</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -175,6 +180,7 @@
     <MESSAGE value="Text Detection Loop timeout&#10;&#10;- If it can't find the deck, exit" />
     <MESSAGE value="Threaded Window Capture&#10;&#10;- Performance is still bad, need detect words to be threaded" />
     <MESSAGE value="Threaded Window Capture Fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Threaded Window Capture Fix" />
+    <MESSAGE value="Threaded Word Detector!!!&#10;&#10;- time.sleep() was put in to make sure things don't go too fast, fps will suffer tho&#10;- works with debug flag being true or false" />
+    <option name="LAST_COMMIT_MESSAGE" value="Threaded Word Detector!!!&#10;&#10;- time.sleep() was put in to make sure things don't go too fast, fps will suffer tho&#10;- works with debug flag being true or false" />
   </component>
 </project>
