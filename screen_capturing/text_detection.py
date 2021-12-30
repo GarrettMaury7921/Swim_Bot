@@ -7,6 +7,8 @@ from pytesseract import pytesseract, Output
 
 
 def detect_deck(deck, debug):
+    loop_timeout = 0
+
     # Get deck
     selected_deck = deck
 
@@ -43,6 +45,11 @@ def detect_deck(deck, debug):
             if key == ord('q'):
                 cv.destroyAllWindows()
                 break
+
+        loop_timeout += 1
+        if loop_timeout >= 10:
+            print('Could not find deck...')
+            exit(-1)
 
         if deck_cords is not None:
             break
