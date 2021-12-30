@@ -1,9 +1,9 @@
 import random
 import cv2 as cv
 import pyautogui
-from time import time
+from time import time, sleep
 from screen_capturing.window_capture import WindowCapture
-from pytesseract import pytesseract, Output
+from screen_capturing.word_detector import WordDetector
 
 
 def detect_deck(deck, debug):
@@ -12,13 +12,13 @@ def detect_deck(deck, debug):
     # Get deck
     selected_deck = deck
 
-    # Path of pytesseract
-    pytesseract.tesseract_cmd = 'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'
-
     # Initialize the window capture class
     window_capture = WindowCapture()
+    word_detector = WordDetector(selected_deck, debug)
 
+    # Start the threads
     window_capture.start()
+    word_detector.start()
 
     loop_time = time()
     while True:
@@ -30,8 +30,9 @@ def detect_deck(deck, debug):
         if screenshot is None:
             continue
 
-        # Detect words in the screenshot to find the deck
-        deck_cords = detect_words(screenshot, selected_deck, debug)
+        word_detector.update(screenshot)
+
+        sleep(1)
 
         if debug is True:
 
@@ -53,11 +54,13 @@ def detect_deck(deck, debug):
                 break
 
         loop_timeout += 1
-        if loop_timeout >= 10:
+        if loop_timeout >= 100000:
             print('Could not find deck...')
             window_capture.stop()
+            word_detector.stop()
             exit(-1)
 
+        deck_cords = word_detector.deck_cords
         if deck_cords is not None:
             break
 
@@ -67,40 +70,7 @@ def detect_deck(deck, debug):
     # Click on the selected deck
     pyautogui.moveTo(deck_x, deck_y, random.random())
     pyautogui.leftClick()
+    # Stop everything
+    word_detector.stop()
     window_capture.stop()
     cv.destroyAllWindows()
-
-
-# Detects words on the screen, it detects them easier if the words have spaces in between them
-# Meaning you should have multiple words for deck names
-def detect_words(screen, selected_deck, debug):
-
-    # Find words in image
-    image_data = pytesseract.image_to_data(screen, output_type=Output.DICT)
-
-    for i, word in enumerate(image_data['text']):
-        # If the word is all uppercase and doesn't contain any special characters
-        if word != "" and word.isupper() and word.isalpha():
-
-            x, y, w, h = image_data['left'][i], image_data['top'][i], image_data['width'][i], image_data['height'][i]
-
-            # Don't count words that are on the left side of the screen
-            if x < 450:
-                continue
-
-            # Center Cords for clicking for later
-            center_x = (x + (1/2) * w)
-            center_y = (y + (1/2) * h)
-
-            # Debugging = Drawing
-            if debug is True:
-                # Draw a plus where the bot needs to click the deck (center of the word)
-                cv.drawMarker(screen, (int(center_x), int(center_y)), (255, 0, 255), cv.MARKER_CROSS, markerSize=40, thickness=2)
-
-                # Draw rectangles around the words
-                cv.rectangle(screen, (x, y), (x + w, y + h), (0, 255, 0), 3)
-                cv.putText(screen, word, (x, y - 16), cv.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 2)
-
-            # If the selected deck is found, return the center cords of that deck
-            if word == selected_deck:
-                return center_x, center_y
