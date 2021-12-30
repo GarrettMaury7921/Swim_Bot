@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="GOOD Text Detection&#10;&#10;- Only uses capital words&#10;- Uses words in the deck area instead of the words on the right&#10;- no special characters">
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Text Detection Loop timeout&#10;&#10;- If it can't find the deck, exit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screen_capturing/text_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen_capturing/text_detection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen_capturing/window_capture.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen_capturing/window_capture.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640826406237</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Text Detection Loop timeout&#10;&#10;- If it can't find the deck, exit">
+      <created>1640827482209</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1640827482209</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,6 +157,7 @@
     <MESSAGE value="Window Capture class&#10;&#10;- Captures what's happening on the current window&#10;- For some reason, trying to capture just the client will not work, so the screen will have to do&#10;- Needs Multithreading" />
     <MESSAGE value="Text Detection&#10;&#10;- Detects Letters and puts boxes around them&#10;- Uses OpenCV and PyTesseract&#10;- Some improvements regarding the menus and main as well" />
     <MESSAGE value="GOOD Text Detection&#10;&#10;- Only uses capital words&#10;- Uses words in the deck area instead of the words on the right&#10;- no special characters" />
-    <option name="LAST_COMMIT_MESSAGE" value="GOOD Text Detection&#10;&#10;- Only uses capital words&#10;- Uses words in the deck area instead of the words on the right&#10;- no special characters" />
+    <MESSAGE value="Text Detection Loop timeout&#10;&#10;- If it can't find the deck, exit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Text Detection Loop timeout&#10;&#10;- If it can't find the deck, exit" />
   </component>
 </project>
