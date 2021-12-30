@@ -18,11 +18,17 @@ def detect_deck(deck, debug):
     # Initialize the window capture class
     window_capture = WindowCapture()
 
+    window_capture.start()
+
     loop_time = time()
     while True:
 
         # get an updated image of the game
-        screenshot = window_capture.get_screenshot()
+        screenshot = window_capture.screenshot
+
+        # if we don't have a screenshot yet, don't run the code below this point yet
+        if screenshot is None:
+            continue
 
         # Detect words in the screenshot to find the deck
         deck_cords = detect_words(screenshot, selected_deck, debug)
@@ -49,6 +55,7 @@ def detect_deck(deck, debug):
         loop_timeout += 1
         if loop_timeout >= 10:
             print('Could not find deck...')
+            window_capture.stop()
             exit(-1)
 
         if deck_cords is not None:
@@ -60,6 +67,7 @@ def detect_deck(deck, debug):
     # Click on the selected deck
     pyautogui.moveTo(deck_x, deck_y, random.random())
     pyautogui.leftClick()
+    window_capture.stop()
     cv.destroyAllWindows()
 
 
