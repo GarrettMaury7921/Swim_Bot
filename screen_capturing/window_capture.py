@@ -1,5 +1,3 @@
-import time
-
 import numpy as np
 # NOTE GO TO version 300
 # https://github.com/mhammond/pywin32/issues/1730
@@ -60,25 +58,25 @@ class WindowCapture:
     def get_screenshot(self):
 
         # get the window image data
-        wDC = win32gui.GetWindowDC(self.hwnd)
-        dcObj = win32ui.CreateDCFromHandle(wDC)
-        cDC = dcObj.CreateCompatibleDC()
-        dataBitMap = win32ui.CreateBitmap()
-        dataBitMap.CreateCompatibleBitmap(dcObj, self.w, self.h)
-        cDC.SelectObject(dataBitMap)
-        cDC.BitBlt((0, 0), (self.w, self.h), dcObj, (self.cropped_x, self.cropped_y), win32con.SRCCOPY)
+        wdc = win32gui.GetWindowDC(self.hwnd)
+        dc_obj = win32ui.CreateDCFromHandle(wdc)
+        cdc = dc_obj.CreateCompatibleDC()
+        data_bit_map = win32ui.CreateBitmap()
+        data_bit_map.CreateCompatibleBitmap(dc_obj, self.w, self.h)
+        cdc.SelectObject(data_bit_map)
+        cdc.BitBlt((0, 0), (self.w, self.h), dc_obj, (self.cropped_x, self.cropped_y), win32con.SRCCOPY)
 
         # convert the raw data into a format opencv can read
         # dataBitMap.SaveBitmapFile(cDC, 'debug.bmp')
-        signedIntsArray = dataBitMap.GetBitmapBits(True)
-        img = np.fromstring(signedIntsArray, dtype='uint8')
+        signed_ints_array = data_bit_map.GetBitmapBits(True)
+        img = np.fromstring(signed_ints_array, dtype='uint8')
         img.shape = (self.h, self.w, 4)
 
         # free resources
-        dcObj.DeleteDC()
-        cDC.DeleteDC()
-        win32gui.ReleaseDC(self.hwnd, wDC)
-        win32gui.DeleteObject(dataBitMap.GetHandle())
+        dc_obj.DeleteDC()
+        cdc.DeleteDC()
+        win32gui.ReleaseDC(self.hwnd, wdc)
+        win32gui.DeleteObject(data_bit_map.GetHandle())
 
         # drop the alpha channel, or cv.matchTemplate() will throw an error like:
         #   error: (-215:Assertion failed) (depth == CV_8U || depth == CV_32F) && type == _templ.type()
@@ -99,11 +97,11 @@ class WindowCapture:
     # https://stackoverflow.com/questions/55547940/how-to-get-a-list-of-the-name-of-every-open-window
     @staticmethod
     def list_window_names():
-        def winEnumHandler(hwnd, ctx):
+        def win_enum_handler(hwnd, ctx):
             if win32gui.IsWindowVisible(hwnd):
                 print(hex(hwnd), win32gui.GetWindowText(hwnd))
 
-        win32gui.EnumWindows(winEnumHandler, None)
+        win32gui.EnumWindows(win_enum_handler, None)
 
     # translate a pixel position on a screenshot image to a pixel position on the screen.
     # pos = (x, y)
@@ -124,7 +122,6 @@ class WindowCapture:
         self.stopped = True
 
     def run(self):
-        # you can write your own time/iterations calculation to determine how fast this is
         while not self.stopped:
             # get an updated image of the game
             screenshot = self.get_screenshot()

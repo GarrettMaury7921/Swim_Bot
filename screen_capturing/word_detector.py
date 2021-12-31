@@ -4,14 +4,17 @@ from pytesseract import pytesseract, Output
 
 
 class WordDetector:
+
     # threading properties
     stopped = True
     lock = None
+
     # properties
     selected_deck = None
     screenshot = None
     debug = None
     deck_cords = None
+
     # Path of pytesseract
     pytesseract.tesseract_cmd = 'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'
 
@@ -22,6 +25,7 @@ class WordDetector:
         self.selected_deck = selected_deck
         self.debug = debug
 
+    # For updating the detector from the window class thread (getting the most recent screenshot)
     def update(self, screenshot):
         self.lock.acquire()
         self.screenshot = screenshot
@@ -36,7 +40,6 @@ class WordDetector:
         self.stopped = True
 
     def run(self):
-        # you can write your own time/iterations calculation to determine how fast this is
         while not self.stopped:
             if self.screenshot is not None:
                 # do object detection

@@ -23,6 +23,8 @@ def detect_deck(deck, debug):
     word_detector.start()
 
     loop_time = time()
+
+    # Keep capturing the screen until the selected deck is found
     while True:
 
         # get an updated image of the game
@@ -32,10 +34,15 @@ def detect_deck(deck, debug):
         if screenshot is None:
             continue
 
+        # Keep the word detector updated with the latest screenshot
         word_detector.update(screenshot)
 
+        # Sleep for a little bit to give the detector time to update and find the decks
+        # Toying with this number can either make the output look like it's skipping or look more accurate
+        # ^ Mostly because it is probably moving too fast in terms of fps
         sleep(0.07)
 
+        # IF TRUE: Show output on a separate screen
         if debug is True:
 
             # resize the windows
@@ -55,6 +62,7 @@ def detect_deck(deck, debug):
                 cv.destroyAllWindows()
                 break
 
+        # After a while, if it's not finding the deck, scroll down
         loop_timeout += 1
         if loop_timeout % 20 == 0:
             # Go to the center of the screen and then scroll down
@@ -68,6 +76,7 @@ def detect_deck(deck, debug):
             word_detector.stop()
             exit(-1)
 
+        # Grab the deck cords, if they exist, the selected deck is found
         deck_cords = word_detector.deck_cords
         if deck_cords is not None:
             break
@@ -78,6 +87,7 @@ def detect_deck(deck, debug):
     # Click on the selected deck
     pyautogui.moveTo(deck_x, deck_y, random.random())
     pyautogui.leftClick()
+
     # Stop everything
     word_detector.stop()
     window_capture.stop()
