@@ -16,6 +16,7 @@ class PortListener:
 
     active_deck = ''
     card_positions = ''
+    game_result = ''
 
     def __init__(self):
         # create a thread lock object
@@ -30,6 +31,10 @@ class PortListener:
         # Listening on Localhost with default runeterra port
         self.card_positions = requests.get(self.address + 'positional-rectangles')
         return self.card_positions.text
+
+    def get_game_result(self):
+        self.game_result = requests.get(self.address + 'game-result')
+        return self.game_result.text
 
     # threading methods
 
@@ -47,11 +52,13 @@ class PortListener:
             # lock the thread while updating the results
             self.lock.acquire()
 
+            # Get all of the data from the port
             self.active_deck = self.get_active_deck()
             self.card_positions = self.get_card_positions()
+            self.game_result = self.get_game_result()
 
-            print(self.active_deck)
-            print(self.card_positions)
+            # print(self.active_deck)
+            # print(self.card_positions)
 
             self.lock.release()
 

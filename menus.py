@@ -72,13 +72,18 @@ class Menus:
         print('Select an Action:')
         self.action = input('1. AI Game\n')
         if int(self.action) == 1:
-            self.deck = input('What deck should I play? (Type in the name of the deck here)\n')
-
-            print('Please Click on the Runeterra Client.')
-            print('Playing AI Game...')
-            time.sleep(2)
-            self.go_to_ai_game(self.dimensions)
-            return 1
+            # Infinite loop goes here until the user puts in a correct name for the deck
+            while True:
+                self.deck = input('What deck should I play? (Type in the name of the deck here)\n')
+                # Check if the deck is all uppercase
+                if self.deck.isupper() is True:
+                    print('Please Click on the Runeterra Client.')
+                    print('Playing AI Game...')
+                    time.sleep(2)
+                    self.go_to_ai_game(self.dimensions)
+                    return 1
+                else:
+                    print('Please input a deck that is in all caps!\n')
 
     @staticmethod
     def go_to_ai_game(dimensions):

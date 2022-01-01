@@ -69,6 +69,9 @@ def detect_deck(deck, debug):
             if controls.get_screensize() == (2560, 1440):
                 pyautogui.moveTo(constants1440p.CENTER_DECK_PAGE_X, constants1440p.CENTER_DECK_PAGE_Y, random.random())
                 pyautogui.scroll(-30)
+            elif controls.get_screensize() == (1920, 1080):
+                print('Have not made 1920x1080 stuff')
+                pass
 
         if loop_timeout >= 1000:
             print('Could not find deck...')
@@ -88,7 +91,19 @@ def detect_deck(deck, debug):
     pyautogui.moveTo(deck_x, deck_y, random.random())
     pyautogui.leftClick()
 
+    # Click on the play button
+    play()
+
     # Stop everything
     word_detector.stop()
     window_capture.stop()
     cv.destroyAllWindows()
+
+
+def play():
+    if controls.get_screensize() == (2560, 1440):
+        pyautogui.moveTo(constants1440p.YELLOW_PLAY_BUTTON_X, constants1440p.YELLOW_PLAY_BUTTON_Y, random.random())
+        pyautogui.leftClick()
+    if controls.get_screensize() == (1920, 1080):
+        print('Have not made 1920x1080 stuff')
+        pass
