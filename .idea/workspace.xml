@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Runeterra Port Listener&#10;&#10;- Can be used to grab the current deck and card positions&#10;- Can be used with threading">
-      <change afterPath="$PROJECT_DIR$/bot/initializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraries/constants1440p.py" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/constants1440p.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/port_listening/port_listener.py" beforeDir="false" afterPath="$PROJECT_DIR$/port_listening/port_listener.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screen_capturing/deck_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen_capturing/deck_detection.py" afterDir="false" />
-    </list>
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Pre-Swim Bot Additions&#10;&#10;- Lots of improvements&#10;- Get gamestate from port listener&#10;- bot clicks on the play button after deck is selected&#10;- deck input has to be all caps" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640987041739</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Pre-Swim Bot Additions&#10;&#10;- Lots of improvements&#10;- Get gamestate from port listener&#10;- bot clicks on the play button after deck is selected&#10;- deck input has to be all caps">
+      <created>1641069765140</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1641069765141</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -209,6 +208,7 @@
     <MESSAGE value="Better Deck finder with scrolling capability" />
     <MESSAGE value="Code Readability Update&#10;&#10;- Added comments and changed the look of the code in most files" />
     <MESSAGE value="Runeterra Port Listener&#10;&#10;- Can be used to grab the current deck and card positions&#10;- Can be used with threading" />
-    <option name="LAST_COMMIT_MESSAGE" value="Runeterra Port Listener&#10;&#10;- Can be used to grab the current deck and card positions&#10;- Can be used with threading" />
+    <MESSAGE value="Pre-Swim Bot Additions&#10;&#10;- Lots of improvements&#10;- Get gamestate from port listener&#10;- bot clicks on the play button after deck is selected&#10;- deck input has to be all caps" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pre-Swim Bot Additions&#10;&#10;- Lots of improvements&#10;- Get gamestate from port listener&#10;- bot clicks on the play button after deck is selected&#10;- deck input has to be all caps" />
   </component>
 </project>
