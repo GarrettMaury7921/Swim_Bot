@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Pre-Swim Bot Additions&#10;&#10;- Lots of improvements&#10;- Get gamestate from port listener&#10;- bot clicks on the play button after deck is selected&#10;- deck input has to be all caps" />
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="gitignore dead">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -176,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641069765141</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="gitignore dead">
+      <created>1641155547786</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1641155547786</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -209,6 +218,7 @@
     <MESSAGE value="Code Readability Update&#10;&#10;- Added comments and changed the look of the code in most files" />
     <MESSAGE value="Runeterra Port Listener&#10;&#10;- Can be used to grab the current deck and card positions&#10;- Can be used with threading" />
     <MESSAGE value="Pre-Swim Bot Additions&#10;&#10;- Lots of improvements&#10;- Get gamestate from port listener&#10;- bot clicks on the play button after deck is selected&#10;- deck input has to be all caps" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pre-Swim Bot Additions&#10;&#10;- Lots of improvements&#10;- Get gamestate from port listener&#10;- bot clicks on the play button after deck is selected&#10;- deck input has to be all caps" />
+    <MESSAGE value="gitignore dead" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore dead" />
   </component>
 </project>
