@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="gitignore dead">
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="gitignore working">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +30,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -185,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641155547786</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="gitignore working">
+      <created>1641155731675</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1641155731675</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -219,6 +228,7 @@
     <MESSAGE value="Runeterra Port Listener&#10;&#10;- Can be used to grab the current deck and card positions&#10;- Can be used with threading" />
     <MESSAGE value="Pre-Swim Bot Additions&#10;&#10;- Lots of improvements&#10;- Get gamestate from port listener&#10;- bot clicks on the play button after deck is selected&#10;- deck input has to be all caps" />
     <MESSAGE value="gitignore dead" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore dead" />
+    <MESSAGE value="gitignore working" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore working" />
   </component>
 </project>
