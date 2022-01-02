@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="gitignore working">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="gitignore update / card assets">
+      <change afterPath="$PROJECT_DIR$/bot/card_finder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/swim_bot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/initializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/initializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/port_listening/port_listener.py" beforeDir="false" afterPath="$PROJECT_DIR$/port_listening/port_listener.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +38,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\garre\PycharmProjects\Swim_Bot\bot" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -194,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641155731675</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="gitignore update / card assets">
+      <created>1641156825580</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1641156825580</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,6 +244,7 @@
     <MESSAGE value="Pre-Swim Bot Additions&#10;&#10;- Lots of improvements&#10;- Get gamestate from port listener&#10;- bot clicks on the play button after deck is selected&#10;- deck input has to be all caps" />
     <MESSAGE value="gitignore dead" />
     <MESSAGE value="gitignore working" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore working" />
+    <MESSAGE value="gitignore update / card assets" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore update / card assets" />
   </component>
 </project>

@@ -1,6 +1,7 @@
 import time
 import requests
 from threading import Thread, Lock
+from bot.card_finder import CardFinder
 
 
 class PortListener:
@@ -18,9 +19,14 @@ class PortListener:
     card_positions = ''
     game_result = ''
 
-    def __init__(self):
+    card_finder = None
+
+    def __init__(self, card_finder):
         # create a thread lock object
         self.lock = Lock()
+
+        # Get the card finder
+        self.card_finder = card_finder
 
     def get_active_deck(self):
         # Listening on Localhost with default runeterra port
@@ -56,6 +62,9 @@ class PortListener:
             self.active_deck = self.get_active_deck()
             self.card_positions = self.get_card_positions()
             self.game_result = self.get_game_result()
+
+            # Update card positions in the finder
+            self.card_finder.update_cards(self.card_positions)
 
             # print(self.active_deck)
             # print(self.card_positions)
