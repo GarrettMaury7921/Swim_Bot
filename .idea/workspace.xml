@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="gitignore update / card assets">
-      <change afterPath="$PROJECT_DIR$/bot/card_finder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/swim_bot.py" afterDir="false" />
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Card Finder Class&#10;&#10;- Finds the cards during the match">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/initializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/initializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/card_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/card_finder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/port_listening/port_listener.py" beforeDir="false" afterPath="$PROJECT_DIR$/port_listening/port_listener.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screen_capturing/deck_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen_capturing/deck_detection.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641156825580</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Card Finder Class&#10;&#10;- Finds the cards during the match">
+      <created>1641164446532</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1641164446532</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -245,6 +251,7 @@
     <MESSAGE value="gitignore dead" />
     <MESSAGE value="gitignore working" />
     <MESSAGE value="gitignore update / card assets" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore update / card assets" />
+    <MESSAGE value="Card Finder Class&#10;&#10;- Finds the cards during the match" />
+    <option name="LAST_COMMIT_MESSAGE" value="Card Finder Class&#10;&#10;- Finds the cards during the match" />
   </component>
 </project>

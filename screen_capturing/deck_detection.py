@@ -40,7 +40,7 @@ def detect_deck(deck, debug):
         # Sleep for a little bit to give the detector time to update and find the decks
         # Toying with this number can either make the output look like it's skipping or look more accurate
         # ^ Mostly because it is probably moving too fast in terms of fps
-        sleep(0.07)
+        sleep(0.08)
 
         # IF TRUE: Show output on a separate screen
         if debug is True:

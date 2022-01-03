@@ -1,7 +1,6 @@
 import time
 import requests
 from threading import Thread, Lock
-from bot.card_finder import CardFinder
 
 
 class PortListener:

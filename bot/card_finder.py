@@ -1,3 +1,4 @@
+import time
 from threading import Thread, Lock
 
 
@@ -13,7 +14,12 @@ class CardFinder:
         self.lock = Lock()
 
     def get_card_stats(self, positional_rectangles):
-        pass
+        # Get the index of where the word CardID is
+        # CardID - 3 is where to start cutting
+        index_to_cut = str(positional_rectangles.find('CardID'))
+        index_to_cut = int(index_to_cut) - 3
+        positional_rectangles = positional_rectangles[int(index_to_cut):]
+        print(positional_rectangles)
 
     # threading methods
 
@@ -36,5 +42,10 @@ class CardFinder:
         while not self.stopped:
             # lock the thread while updating the results
             self.lock.acquire()
-            print(self.positional_rectangles)
+
+            # Get the stats of every card
+            self.card_stats = self.get_card_stats(self.positional_rectangles)
+
+            # Getting the cards is so fast, I have to sleep it for a while
+            time.sleep(0.5)
             self.lock.release()
