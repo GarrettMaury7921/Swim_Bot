@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Card Finder Class&#10;&#10;- Finds the cards during the match">
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/card_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/card_finder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/port_listening/port_listener.py" beforeDir="false" afterPath="$PROJECT_DIR$/port_listening/port_listener.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screen_capturing/deck_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen_capturing/deck_detection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641164446532</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Parsing through strings for finding card stats">
+      <created>1641171379247</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1641171379247</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -252,6 +258,7 @@
     <MESSAGE value="gitignore working" />
     <MESSAGE value="gitignore update / card assets" />
     <MESSAGE value="Card Finder Class&#10;&#10;- Finds the cards during the match" />
-    <option name="LAST_COMMIT_MESSAGE" value="Card Finder Class&#10;&#10;- Finds the cards during the match" />
+    <MESSAGE value="Parsing through strings for finding card stats" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parsing through strings for finding card stats" />
   </component>
 </project>
