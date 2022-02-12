@@ -7,6 +7,7 @@ from screen_capturing.window_capture import WindowCapture
 from screen_capturing.word_detector import WordDetector
 
 
+# LOOK AT THE SCREEN AND FIND THE SELECTED DECK IN THE DECK SELECTION SCREEN
 def detect_deck(deck, debug):
     # Loop checkers
     loop_timeout = 0

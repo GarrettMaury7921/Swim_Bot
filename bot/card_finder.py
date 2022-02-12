@@ -22,6 +22,8 @@ class CardFinder:
         self.lock = Lock()
 
     def get_card_stats(self, positional_rectangles):
+        # FIND THE CARD CODE OF EACH CARD IN HAND
+
         # Get the index of where the word CardID is
         # CardID - 3 is where to start cutting
         index_to_cut = str(positional_rectangles.find('CardID'))
@@ -65,7 +67,7 @@ class CardFinder:
 
             index += 1
 
-        # Open the files needed to search through
+        # Open the files needed to search through to find the stats for each card in your hand
         file1 = open(self.set1, "r")
         file2 = open(self.set2, "r")
         file3 = open(self.set3, "r")
