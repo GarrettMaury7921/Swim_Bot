@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Card Pool Update 2/12&#10;&#10;- Updated the .json files with the most up to date cards">
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Comment Update / Bug Fix&#10;&#10;- Fixed the card initializer from being initialized again&#10;- Easier code to understand with more comments to some files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/card_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/card_finder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_assets/2560x1440/main_menu/main_menu3.png" beforeDir="false" afterPath="$PROJECT_DIR$/image_assets/2560x1440/main_menu/main_menu3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screen_capturing/deck_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen_capturing/deck_detection.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +32,7 @@
     <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../OpenAI_Tutorials" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -230,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644684082021</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Comment Update / Bug Fix&#10;&#10;- Fixed the card initializer from being initialized again&#10;- Easier code to understand with more comments to some files">
+      <created>1644688804395</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1644688804395</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -269,6 +272,7 @@
     <MESSAGE value="Card Finder Class&#10;&#10;- Finds the cards during the match" />
     <MESSAGE value="Parsing through strings for finding card stats" />
     <MESSAGE value="Card Pool Update 2/12&#10;&#10;- Updated the .json files with the most up to date cards" />
-    <option name="LAST_COMMIT_MESSAGE" value="Card Pool Update 2/12&#10;&#10;- Updated the .json files with the most up to date cards" />
+    <MESSAGE value="Comment Update / Bug Fix&#10;&#10;- Fixed the card initializer from being initialized again&#10;- Easier code to understand with more comments to some files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comment Update / Bug Fix&#10;&#10;- Fixed the card initializer from being initialized again&#10;- Easier code to understand with more comments to some files" />
   </component>
 </project>
