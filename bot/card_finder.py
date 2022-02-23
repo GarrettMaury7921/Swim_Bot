@@ -21,7 +21,7 @@ class CardFinder:
         # create a thread lock object
         self.lock = Lock()
 
-    def get_card_stats(self, positional_rectangles):
+    def get_card_codes(self, positional_rectangles):
         # FIND THE CARD CODE OF EACH CARD IN HAND
 
         # Get the index of where the word CardID is
@@ -98,7 +98,7 @@ class CardFinder:
             self.lock.acquire()
 
             # Get the stats of every card
-            self.card_stats = self.get_card_stats(self.positional_rectangles)
+            self.card_stats = self.get_card_codes(self.positional_rectangles)
 
             # Getting the cards is so fast, I have to sleep it for a while
             time.sleep(0.5)
