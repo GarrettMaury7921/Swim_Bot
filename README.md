@@ -1,6 +1,6 @@
 # Swim_Bot
-CSH Major Project 2021 - 2022
-Made By Garrett Maury
+## CSH Major Project 2021 - 2022
+## Made By Garrett Maury
 
 ## Main Directories / Scripts
 
