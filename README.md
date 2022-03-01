@@ -1,4 +1,19 @@
 # Swim_Bot
-A Reinforcement Learning AI That Tries To Play A Card Game Made By Riot Games.
+CSH Major Project 2021 - 2022
+Made By Garrett Maury
 
-IN DEVELOPMENT
+## Main Directories / Scripts
+
+### main.py
+
+### menus.py
+
+### bot directory
+
+### image_assets directory
+
+### libraries directory
+
+### port_listening directory
+
+### screen_capturing directory
