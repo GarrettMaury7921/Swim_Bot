@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="2/22 Runeterra Card Update&#10;&#10;- New Expansion Yummers">
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Small Tweaks&#10;&#10;- Card finder method change, main is debugging with one method running">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/card_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/card_finder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/port_listening/port_listener.py" beforeDir="false" afterPath="$PROJECT_DIR$/port_listening/port_listener.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645573902451</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Small Tweaks&#10;&#10;- Card finder method change, main is debugging with one method running">
+      <created>1645581992230</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1645581992230</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -283,6 +290,7 @@
     <MESSAGE value="Card Pool Update 2/12&#10;&#10;- Updated the .json files with the most up to date cards" />
     <MESSAGE value="Comment Update / Bug Fix&#10;&#10;- Fixed the card initializer from being initialized again&#10;- Easier code to understand with more comments to some files" />
     <MESSAGE value="2/22 Runeterra Card Update&#10;&#10;- New Expansion Yummers" />
-    <option name="LAST_COMMIT_MESSAGE" value="2/22 Runeterra Card Update&#10;&#10;- New Expansion Yummers" />
+    <MESSAGE value="Small Tweaks&#10;&#10;- Card finder method change, main is debugging with one method running" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small Tweaks&#10;&#10;- Card finder method change, main is debugging with one method running" />
   </component>
 </project>

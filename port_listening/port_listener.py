@@ -2,6 +2,8 @@ import time
 import requests
 from threading import Thread, Lock
 
+# IN BROWSER FOR TEST TYPE http://127.0.0.1:21337/positional-rectangles
+
 
 class PortListener:
 

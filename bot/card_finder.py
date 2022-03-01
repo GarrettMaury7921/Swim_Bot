@@ -21,6 +21,7 @@ class CardFinder:
         # create a thread lock object
         self.lock = Lock()
 
+    # SHOWS CARDS IN PLAYER'S HAND IF YOU CAN SEE THEM
     def get_card_codes(self, positional_rectangles):
         # FIND THE CARD CODE OF EACH CARD IN HAND
 
