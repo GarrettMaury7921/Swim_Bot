@@ -1,0 +1,2 @@
+# ACCESSIBILITY SETTING IN LOR
+# Click to Action

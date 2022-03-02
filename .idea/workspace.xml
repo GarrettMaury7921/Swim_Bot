@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Small Tweaks&#10;&#10;- Card finder method change, main is debugging with one method running">
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Card Update 3/1/2022&#10;&#10;- Updated the directories and added some comments for the card finder and port listener">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/card_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/card_finder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/port_listening/port_listener.py" beforeDir="false" afterPath="$PROJECT_DIR$/port_listening/port_listener.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/initializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/initializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/swim_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/swim_bot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645581992230</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Card Update 3/1/2022&#10;&#10;- Updated the directories and added some comments for the card finder and port listener">
+      <created>1646175435209</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1646175435209</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -266,7 +274,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="OLD 1920x1080 SETUP&#10;&#10;Look back here to see what I did for 1920x1080 before I remove everything" />
     <MESSAGE value="RESTARTING&#10;&#10;- Querying mouse position on a 1440x2560 display" />
     <MESSAGE value="Query Window resolution&#10;&#10;- Added menus.py&#10;- Added constants1440p.py&#10;- Added controls.py" />
     <MESSAGE value="Finding Main Menu with dimensions" />
@@ -291,6 +298,7 @@
     <MESSAGE value="Comment Update / Bug Fix&#10;&#10;- Fixed the card initializer from being initialized again&#10;- Easier code to understand with more comments to some files" />
     <MESSAGE value="2/22 Runeterra Card Update&#10;&#10;- New Expansion Yummers" />
     <MESSAGE value="Small Tweaks&#10;&#10;- Card finder method change, main is debugging with one method running" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small Tweaks&#10;&#10;- Card finder method change, main is debugging with one method running" />
+    <MESSAGE value="Card Update 3/1/2022&#10;&#10;- Updated the directories and added some comments for the card finder and port listener" />
+    <option name="LAST_COMMIT_MESSAGE" value="Card Update 3/1/2022&#10;&#10;- Updated the directories and added some comments for the card finder and port listener" />
   </component>
 </project>
