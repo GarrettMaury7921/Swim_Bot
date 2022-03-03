@@ -50,7 +50,8 @@ class Menus:
 
         while True:
             # Checks to see if the main menu can be found by looking if components of the menu are on screen
-            if pyautogui.locateOnScreen(self.main_menu_dir, confidence=.9) is not None and \
+            # IS 'OR' RIGHT NOW TO MAKE FINDING THE MENU EASIER
+            if pyautogui.locateOnScreen(self.main_menu_dir, confidence=.9) is not None or \
                     pyautogui.locateOnScreen(main_menu_settings, confidence=.9) is not None:
                 print('Runeterra Main Menu Found.')
                 return True

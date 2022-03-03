@@ -29,6 +29,6 @@ class Initializer:
 
         # Wait for cards to go in hand
         print('Waiting for cards to go in hand...')
-        time.sleep(8.2)
+        time.sleep(8)
         print('Activating Card Finder.')
         card_finder.start()

@@ -69,7 +69,7 @@ def get_card_codes(positional_rectangles):
             enemy_cards.append(card_codes[x])
 
     # print(enemy_cards)
-    print(my_cards)
+    # print(my_cards)
     # print(clean_codes)
 
     # Return both lists
