@@ -1,9 +1,11 @@
 import time
 from threading import Thread, Lock
-
+from bot.card_stat_finder import get_card_stats
 
 # FIND THE CARD CODE OF EACH CARD IN HAND
 # SHOWS CARDS IN PLAYER'S HAND IF YOU CAN SEE THEM
+
+
 def get_card_codes(positional_rectangles, debug):
 
     # Get the index of where the word 'CardID' is
@@ -82,9 +84,13 @@ class CardFinder:
     stopped = True
     lock = None
     positional_rectangles = ''
+
+    # Values have all codes / stats of cards in play
     all_cards = []
+    all_stats = []
 
     def __init__(self, debug):
+
         # Attributes
         self.debug = debug
 
@@ -109,12 +115,16 @@ class CardFinder:
         self.stopped = True
 
     def run(self):
+        print('Finding cards and card stats...')
         while not self.stopped:
             # lock the thread while updating the results
             self.lock.acquire()
 
-            # Get the stats of every card, print them out if we're debugging
+            # Get the codes of every card, print them out if we're debugging
             self.all_cards = get_card_codes(self.positional_rectangles, self.debug)
+
+            # Get the stats of every card from card_stat_finder.py
+            self.all_stats = get_card_stats(self.all_cards)
 
             # Getting the cards is so fast, I have to sleep it for a while
             time.sleep(0.5)

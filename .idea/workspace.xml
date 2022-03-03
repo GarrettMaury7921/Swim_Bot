@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Swim_Bot Tweaks&#10;&#10;- Main menu can be found with new menu&#10;- Faster bot&#10;- More comments&#10;- Ready to test and move forward with stat finding">
-      <change afterPath="$PROJECT_DIR$/bot/card_stat_finder.py" afterDir="false" />
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Debug Additions&#10;&#10;- Printing out the cards in the game now happens when you switch the debug flag to true in main.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/card_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/card_finder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/initializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/initializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/card_stat_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/card_stat_finder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -272,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646266828587</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Debug Additions&#10;&#10;- Printing out the cards in the game now happens when you switch the debug flag to true in main.py">
+      <created>1646268969514</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1646268969514</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -289,7 +295,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Finding Main Menu with dimensions" />
     <MESSAGE value="Clickable Buttons take you to the AI menu&#10;&#10;- uses pyautogui to click the buttons" />
     <MESSAGE value="Window Capture class&#10;&#10;- Captures what's happening on the current window&#10;- For some reason, trying to capture just the client will not work, so the screen will have to do&#10;- Needs Multithreading" />
     <MESSAGE value="Text Detection&#10;&#10;- Detects Letters and puts boxes around them&#10;- Uses OpenCV and PyTesseract&#10;- Some improvements regarding the menus and main as well" />
@@ -314,6 +319,7 @@
     <MESSAGE value="Card Update 3/1/2022&#10;&#10;- Updated the directories and added some comments for the card finder and port listener" />
     <MESSAGE value="CARD FINDER CHANGES&#10;&#10;- Can differentiate between enemy and player cards&#10;- Code is a lot cleaner and better" />
     <MESSAGE value="Swim_Bot Tweaks&#10;&#10;- Main menu can be found with new menu&#10;- Faster bot&#10;- More comments&#10;- Ready to test and move forward with stat finding" />
-    <option name="LAST_COMMIT_MESSAGE" value="Swim_Bot Tweaks&#10;&#10;- Main menu can be found with new menu&#10;- Faster bot&#10;- More comments&#10;- Ready to test and move forward with stat finding" />
+    <MESSAGE value="Debug Additions&#10;&#10;- Printing out the cards in the game now happens when you switch the debug flag to true in main.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debug Additions&#10;&#10;- Printing out the cards in the game now happens when you switch the debug flag to true in main.py" />
   </component>
 </project>
