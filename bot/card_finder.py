@@ -1,10 +1,10 @@
-import sys
 import time
 from threading import Thread, Lock
 
 
 # FIND THE CARD CODE OF EACH CARD IN HAND
-def get_card_codes(positional_rectangles):
+# SHOWS CARDS IN PLAYER'S HAND IF YOU CAN SEE THEM
+def get_card_codes(positional_rectangles, debug):
 
     # Get the index of where the word 'CardID' is
     # CardID - 3 is where to start cutting
@@ -68,9 +68,10 @@ def get_card_codes(positional_rectangles):
         if "false" in card_codes[x]:
             enemy_cards.append(card_codes[x])
 
-    # print(enemy_cards)
-    # print(my_cards)
-    # print(clean_codes)
+    if debug is True:
+        print('Enemy Cards ' + str(enemy_cards))
+        print('My Cards ' + str(my_cards))
+        print('All Card Codes ' + str(clean_codes) + "\n")
 
     # Return both lists
     return my_cards, enemy_cards, clean_codes
@@ -81,28 +82,14 @@ class CardFinder:
     stopped = True
     lock = None
     positional_rectangles = ''
-    card_stats = []
+    all_cards = []
 
-    # File Variables
-    set1 = sys.path[0] + "/bot/card_assets/set1-en_us.json"
-    set2 = sys.path[0] + "/bot/card_assets/set2-en_us.json"
-    set3 = sys.path[0] + "/bot/card_assets/set3-en_us.json"
-    set4 = sys.path[0] + "/bot/card_assets/set4-en_us.json"
-    set5 = sys.path[0] + "/bot/card_assets/set5-en_us.json"
+    def __init__(self, debug):
+        # Attributes
+        self.debug = debug
 
-    def __init__(self):
         # create a thread lock object
         self.lock = Lock()
-
-    # SHOWS CARDS IN PLAYER'S HAND IF YOU CAN SEE THEM
-
-    def get_card_stats(self):
-        # Open the files needed to search through to find the stats for each card in your hand
-        file1 = open(self.set1, "r")
-        file2 = open(self.set2, "r")
-        file3 = open(self.set3, "r")
-        file4 = open(self.set4, "r")
-        file5 = open(self.set5, "r")
 
     # threading methods
 
@@ -126,8 +113,8 @@ class CardFinder:
             # lock the thread while updating the results
             self.lock.acquire()
 
-            # Get the stats of every card
-            self.card_stats = get_card_codes(self.positional_rectangles)
+            # Get the stats of every card, print them out if we're debugging
+            self.all_cards = get_card_codes(self.positional_rectangles, self.debug)
 
             # Getting the cards is so fast, I have to sleep it for a while
             time.sleep(0.5)

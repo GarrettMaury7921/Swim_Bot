@@ -5,10 +5,13 @@ from port_listening.port_listener import PortListener
 
 class Initializer:
 
-    def __init__(self):
+    def __init__(self, debug):
+        # Attributes
+        self.debug = debug
+
         print('Bot Initializer Started.')
         # Initialize the Card finder first
-        card_finder = CardFinder()
+        card_finder = CardFinder(debug)
 
         # Initialize the port listener
         listener = PortListener(card_finder)

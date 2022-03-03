@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="CARD FINDER CHANGES&#10;&#10;- Can differentiate between enemy and player cards&#10;- Code is a lot cleaner and better">
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Swim_Bot Tweaks&#10;&#10;- Main menu can be found with new menu&#10;- Faster bot&#10;- More comments&#10;- Ready to test and move forward with stat finding">
+      <change afterPath="$PROJECT_DIR$/bot/card_stat_finder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_assets/2560x1440/main_menu/main_menu3.png" beforeDir="false" afterPath="$PROJECT_DIR$/image_assets/2560x1440/main_menu/main_menu3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/card_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/card_finder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/initializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/initializer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menus.py" beforeDir="false" afterPath="$PROJECT_DIR$/menus.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646183276609</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Swim_Bot Tweaks&#10;&#10;- Main menu can be found with new menu&#10;- Faster bot&#10;- More comments&#10;- Ready to test and move forward with stat finding">
+      <created>1646266828587</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1646266828587</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -281,7 +289,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Query Window resolution&#10;&#10;- Added menus.py&#10;- Added constants1440p.py&#10;- Added controls.py" />
     <MESSAGE value="Finding Main Menu with dimensions" />
     <MESSAGE value="Clickable Buttons take you to the AI menu&#10;&#10;- uses pyautogui to click the buttons" />
     <MESSAGE value="Window Capture class&#10;&#10;- Captures what's happening on the current window&#10;- For some reason, trying to capture just the client will not work, so the screen will have to do&#10;- Needs Multithreading" />
@@ -306,6 +313,7 @@
     <MESSAGE value="Small Tweaks&#10;&#10;- Card finder method change, main is debugging with one method running" />
     <MESSAGE value="Card Update 3/1/2022&#10;&#10;- Updated the directories and added some comments for the card finder and port listener" />
     <MESSAGE value="CARD FINDER CHANGES&#10;&#10;- Can differentiate between enemy and player cards&#10;- Code is a lot cleaner and better" />
-    <option name="LAST_COMMIT_MESSAGE" value="CARD FINDER CHANGES&#10;&#10;- Can differentiate between enemy and player cards&#10;- Code is a lot cleaner and better" />
+    <MESSAGE value="Swim_Bot Tweaks&#10;&#10;- Main menu can be found with new menu&#10;- Faster bot&#10;- More comments&#10;- Ready to test and move forward with stat finding" />
+    <option name="LAST_COMMIT_MESSAGE" value="Swim_Bot Tweaks&#10;&#10;- Main menu can be found with new menu&#10;- Faster bot&#10;- More comments&#10;- Ready to test and move forward with stat finding" />
   </component>
 </project>
