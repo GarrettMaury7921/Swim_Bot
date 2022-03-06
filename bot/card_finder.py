@@ -76,10 +76,10 @@ def get_card_codes(positional_rectangles, debug):
         if "false" in card_codes[x]:
             enemy_cards.append(card_codes[x])
 
-    if debug is True:
-        print('Enemy Cards ' + str(enemy_cards))
-        print('My Cards ' + str(my_cards))
-        print('All Card Codes ' + str(clean_codes) + "\n")
+    # if debug is True:
+    #     print('Enemy Cards ' + str(enemy_cards))
+    #     print('My Cards ' + str(my_cards))
+    #     print('All Card Codes ' + str(clean_codes) + "\n")
 
     # Return both lists
     return my_cards, enemy_cards, clean_codes

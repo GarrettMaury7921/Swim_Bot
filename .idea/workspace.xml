@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Stat Finding&#10;&#10;- Able to find all the lines of the card stats in hand from the txt file">
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Search file for cards function&#10;&#10;- Able to find where in the file the data for each card is (from set 1)&#10;- Made it's own function for searching for data&#10;- need to extract the data from the file (will also be in it's own function)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/card_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/card_finder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/card_stat_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/card_stat_finder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -312,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646542144035</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Search file for cards function&#10;&#10;- Able to find where in the file the data for each card is (from set 1)&#10;- Made it's own function for searching for data&#10;- need to extract the data from the file (will also be in it's own function)">
+      <created>1646599009755</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1646599009755</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -329,7 +337,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Threaded Window Capture&#10;&#10;- Performance is still bad, need detect words to be threaded" />
     <MESSAGE value="Threaded Window Capture Fix" />
     <MESSAGE value="Threaded Word Detector!!!&#10;&#10;- time.sleep() was put in to make sure things don't go too fast, fps will suffer tho&#10;- works with debug flag being true or false" />
     <MESSAGE value="Better Deck finder with scrolling capability" />
@@ -354,6 +361,7 @@
     <MESSAGE value="TXT Replacements&#10;&#10;- replaced json files with txt files&#10;- fixed a bug with formatting card codes in card_finder.py" />
     <MESSAGE value="Card Code formatting&#10;&#10;- in &quot;cardCode&quot;: &quot;010100101&quot; format (with space)&#10;- Can find codes in card directory (txt file)" />
     <MESSAGE value="Stat Finding&#10;&#10;- Able to find all the lines of the card stats in hand from the txt file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Stat Finding&#10;&#10;- Able to find all the lines of the card stats in hand from the txt file" />
+    <MESSAGE value="Search file for cards function&#10;&#10;- Able to find where in the file the data for each card is (from set 1)&#10;- Made it's own function for searching for data&#10;- need to extract the data from the file (will also be in it's own function)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Search file for cards function&#10;&#10;- Able to find where in the file the data for each card is (from set 1)&#10;- Made it's own function for searching for data&#10;- need to extract the data from the file (will also be in it's own function)" />
   </component>
 </project>

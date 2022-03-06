@@ -18,18 +18,43 @@ def get_card_stats(all_cards, debug):
         for i in enemy_cards:
             if card in i:
                 enemy_cards_clean.append(card)
+                break
 
-        # Check if a card is in my hand
+        # Check if a card is my card
         for i in my_cards:
             if card in i:
                 my_cards_clean.append(card)
+                break
 
     # print(enemy_cards_clean)
-    # print(my_cards_clean)
+    # print(str(my_cards_clean) + '\n')
 
     # Search through the file for the lines for the stats for MY cards
     my_cards_file1 = search_file_for_cards(1, my_cards_clean, debug)
-    print(my_cards_file1)
+    my_cards_file2 = search_file_for_cards(2, my_cards_clean, debug)
+    my_cards_file3 = search_file_for_cards(3, my_cards_clean, debug)
+    my_cards_file4 = search_file_for_cards(4, my_cards_clean, debug)
+    my_cards_file5 = search_file_for_cards(5, my_cards_clean, debug)
+
+    # Search through the file for the lines for the stats for ENEMY cards
+    enemy_cards_file1 = search_file_for_cards(1, enemy_cards_clean, debug)
+    enemy_cards_file2 = search_file_for_cards(2, enemy_cards_clean, debug)
+    enemy_cards_file3 = search_file_for_cards(3, enemy_cards_clean, debug)
+    enemy_cards_file4 = search_file_for_cards(4, enemy_cards_clean, debug)
+    enemy_cards_file5 = search_file_for_cards(5, enemy_cards_clean, debug)
+
+    if debug is True:
+        print('My cards found from set 1 ' + str(my_cards_file1))
+        print('Found from set 2 ' + str(my_cards_file2))
+        print('Found from set 3 ' + str(my_cards_file3))
+        print('Found from set 4 ' + str(my_cards_file4))
+        print('Found from set 5 ' + str(my_cards_file5) + '\n')
+
+        print('Enemy cards found from set 1 ' + str(enemy_cards_file1))
+        print('Found from set 2 ' + str(enemy_cards_file2))
+        print('Found from set 3 ' + str(enemy_cards_file3))
+        print('Found from set 4 ' + str(enemy_cards_file4))
+        print('Found from set 5 ' + str(enemy_cards_file5) + '\n')
 
 
 # Put a number in for the file
@@ -59,9 +84,6 @@ def search_file_for_cards(file_num, card_codes, debug):
         end_stats = 0
         code_found = False
 
-        if debug is True:
-            print(code)
-
         # Search for the card in file1
         for line in file:
             index += 1
@@ -71,20 +93,20 @@ def search_file_for_cards(file_num, card_codes, debug):
                 # INDEX -16 = Beginning of stats
                 # INDEX + 17 = End of stats
 
-                if debug is True:
-                    print(code + ' found at line ' + str(index) + ' in file ' + str(file_num) + '. Stats begin at ' +
-                          str(begin_stats) + ', stats end at ' + str(end_stats))
-
                 begin_stats = index - 16
                 end_stats = index + 17
 
-                # file_lines format: <file number> <begin line> <end line for stats for that card>
-                card_stats = file_num, begin_stats, end_stats
-                file_lines.append(card_stats)
+                if debug is True:
+                    print(code + ' found at line ' + str(index) + ' in set ' + str(file_num) + '. Stats begin at ' +
+                          str(begin_stats) + ', stats end at ' + str(end_stats))
 
             if code_found is True:
                 # Close file
                 file.close()
+
+                # file_lines format: <file number> <begin line> <end line for stats for that card>
+                card_stats = file_num, begin_stats, end_stats
+                file_lines.append(card_stats)
                 break
 
     return file_lines

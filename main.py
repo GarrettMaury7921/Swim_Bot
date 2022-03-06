@@ -4,7 +4,7 @@ from bot.initializer import Initializer
 
 # This is the main driver code of the bot
 
-DEBUGGING = False
+DEBUGGING = True
 
 # Initialize the resolution and ask the user for an action for the bot to take
 # initialize_menu = Menus()
