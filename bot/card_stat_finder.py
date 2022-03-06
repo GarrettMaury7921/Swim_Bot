@@ -1,4 +1,3 @@
-import json
 import sys
 
 
@@ -26,16 +25,11 @@ def get_card_stats(all_cards):
 
     # Open the files needed to search through to find the stats for each card in your hand, encoding
     # because riot's a bum
-    file1 = open(sys.path[0] + "/bot/card_assets/set1-en_us.json", "r", encoding='utf-8')
-    file2 = open(sys.path[0] + "/bot/card_assets/set2-en_us.json", "r", encoding='utf-8')
-    file3 = open(sys.path[0] + "/bot/card_assets/set3-en_us.json", "r", encoding='utf-8')
-    file4 = open(sys.path[0] + "/bot/card_assets/set4-en_us.json", "r", encoding='utf-8')
-    file5 = open(sys.path[0] + "/bot/card_assets/set5-en_us.json", "r", encoding='utf-8')
+    file1 = open(sys.path[0] + "/bot/card_assets/set1-en_us.txt", "r", encoding='utf-8')
+    file2 = open(sys.path[0] + "/bot/card_assets/set2-en_us.txt", "r", encoding='utf-8')
+    file3 = open(sys.path[0] + "/bot/card_assets/set3-en_us.txt", "r", encoding='utf-8')
+    file4 = open(sys.path[0] + "/bot/card_assets/set4-en_us.txt", "r", encoding='utf-8')
+    file5 = open(sys.path[0] + "/bot/card_assets/set5-en_us.txt", "r", encoding='utf-8')
 
-    # Search for the codes in the card dictionary
-    set1 = json.load(file1)
-    set2 = json.load(file2)
-    set3 = json.load(file3)
-    set4 = json.load(file4)
-    set5 = json.load(file5)
+    # Loop through all sets and check where my cards are from
 

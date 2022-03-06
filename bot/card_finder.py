@@ -49,7 +49,13 @@ def get_card_codes(positional_rectangles, debug):
             card = card + '"'
 
         # Cut the last end for simple codes, adding to a new variable instead of card for another list
-        temp = card[:int(index_to_cut)]
+        temp = card[:int(index_to_cut + 1)]
+
+        # Make the first letter of CardCode lowercase for 'card' and 'temp'
+        # Using lower() + string slicing
+        # Lowercase first character of String
+        card = ('"' + card[1].lower()) + card[2:]
+        temp = ('"' + temp[1].lower()) + temp[2:]
 
         # add the cards to the whole list
         card_codes.append(card)
