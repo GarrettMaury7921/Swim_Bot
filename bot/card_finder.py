@@ -44,10 +44,6 @@ def get_card_codes(positional_rectangles, debug):
         index_to_cut -= 1
         card = card[int(index_to_cut):]
 
-        # Fix the last character not being a "
-        if card[-1] != '"':
-            card = card + '"'
-
         # Cut the last end for simple codes, adding to a new variable instead of card for another list
         temp = card[:int(index_to_cut + 1)]
 
@@ -56,6 +52,10 @@ def get_card_codes(positional_rectangles, debug):
         # Lowercase first character of String
         card = ('"' + card[1].lower()) + 'ardCode": ' + card[11:]
         temp = ('"' + temp[1].lower()) + 'ardCode": ' + temp[11:]
+
+        # Fix the last character being an "
+        if temp[-1] == '"' and temp[-2] == ',':
+            temp = temp[:-1]
 
         # add the cards to the whole list
         card_codes.append(card)
@@ -130,7 +130,7 @@ class CardFinder:
             self.all_cards = get_card_codes(self.positional_rectangles, self.debug)
 
             # Get the stats of every card from card_stat_finder.py
-            self.all_stats = get_card_stats(self.all_cards)
+            self.all_stats = get_card_stats(self.all_cards, self.debug)
 
             # Getting the cards is so fast, I have to sleep it for a while
             time.sleep(0.5)

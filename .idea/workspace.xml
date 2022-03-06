@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="TXT Replacements&#10;&#10;- replaced json files with txt files&#10;- fixed a bug with formatting card codes in card_finder.py">
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Card Code formatting&#10;&#10;- in &quot;cardCode&quot;: &quot;010100101&quot; format (with space)&#10;- Can find codes in card directory (txt file)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/card_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/card_finder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/card_stat_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/card_stat_finder.py" afterDir="false" />
@@ -298,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646537864589</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Card Code formatting&#10;&#10;- in &quot;cardCode&quot;: &quot;010100101&quot; format (with space)&#10;- Can find codes in card directory (txt file)">
+      <created>1646538955964</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1646538955964</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -315,7 +322,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="GOOD Text Detection&#10;&#10;- Only uses capital words&#10;- Uses words in the deck area instead of the words on the right&#10;- no special characters" />
     <MESSAGE value="Text Detection Loop timeout&#10;&#10;- If it can't find the deck, exit" />
     <MESSAGE value="Threaded Window Capture&#10;&#10;- Performance is still bad, need detect words to be threaded" />
     <MESSAGE value="Threaded Window Capture Fix" />
@@ -340,6 +346,7 @@
     <MESSAGE value="Better Card formatting data&#10;&#10;- Card stat finder now has clean card codes it can sort out from the card finder" />
     <MESSAGE value="json loading&#10;&#10;- loading stats from json card files" />
     <MESSAGE value="TXT Replacements&#10;&#10;- replaced json files with txt files&#10;- fixed a bug with formatting card codes in card_finder.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="TXT Replacements&#10;&#10;- replaced json files with txt files&#10;- fixed a bug with formatting card codes in card_finder.py" />
+    <MESSAGE value="Card Code formatting&#10;&#10;- in &quot;cardCode&quot;: &quot;010100101&quot; format (with space)&#10;- Can find codes in card directory (txt file)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Card Code formatting&#10;&#10;- in &quot;cardCode&quot;: &quot;010100101&quot; format (with space)&#10;- Can find codes in card directory (txt file)" />
   </component>
 </project>
