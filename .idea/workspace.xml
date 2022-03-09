@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Duplicate Card Entry Fix!&#10;&#10;- Cards were coming in as duplicates if you had more than 1 copy of a card&#10;- Cards can be found from any set">
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Data Extraction for player's cards&#10;&#10;- Searches the .txt file for all the card data for each card in hand and in play">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/card_stat_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/card_stat_finder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
@@ -326,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646603882404</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Data Extraction for player's cards&#10;&#10;- Searches the .txt file for all the card data for each card in hand and in play">
+      <created>1646786147841</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1646786147841</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -343,7 +350,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Threaded Word Detector!!!&#10;&#10;- time.sleep() was put in to make sure things don't go too fast, fps will suffer tho&#10;- works with debug flag being true or false" />
     <MESSAGE value="Better Deck finder with scrolling capability" />
     <MESSAGE value="Code Readability Update&#10;&#10;- Added comments and changed the look of the code in most files" />
     <MESSAGE value="Runeterra Port Listener&#10;&#10;- Can be used to grab the current deck and card positions&#10;- Can be used with threading" />
@@ -368,6 +374,7 @@
     <MESSAGE value="Stat Finding&#10;&#10;- Able to find all the lines of the card stats in hand from the txt file" />
     <MESSAGE value="Search file for cards function&#10;&#10;- Able to find where in the file the data for each card is (from set 1)&#10;- Made it's own function for searching for data&#10;- need to extract the data from the file (will also be in it's own function)" />
     <MESSAGE value="Duplicate Card Entry Fix!&#10;&#10;- Cards were coming in as duplicates if you had more than 1 copy of a card&#10;- Cards can be found from any set" />
-    <option name="LAST_COMMIT_MESSAGE" value="Duplicate Card Entry Fix!&#10;&#10;- Cards were coming in as duplicates if you had more than 1 copy of a card&#10;- Cards can be found from any set" />
+    <MESSAGE value="Data Extraction for player's cards&#10;&#10;- Searches the .txt file for all the card data for each card in hand and in play" />
+    <option name="LAST_COMMIT_MESSAGE" value="Data Extraction for player's cards&#10;&#10;- Searches the .txt file for all the card data for each card in hand and in play" />
   </component>
 </project>

@@ -44,7 +44,6 @@ def get_card_stats(all_cards, debug):
     enemy_cards_file5 = search_file_for_cards(5, enemy_cards_clean, debug)
 
     # Actually get the data from the file with MY cards
-    card_stats = ''
     my_cards_stats = []
     for stats in my_cards_file1:
         if not stats:
@@ -72,9 +71,36 @@ def get_card_stats(all_cards, debug):
         else:
             my_cards_stats.append(extract_data_from_file(stats))
 
-    print(my_cards_stats)
+    # Actually get the data from the file with ENEMY cards
+    enemy_cards_stats = []
+    for stats in enemy_cards_file1:
+        if not stats:
+            break
+        else:
+            enemy_cards_stats.append(extract_data_from_file(stats))
+    for stats in enemy_cards_file2:
+        if not stats:
+            break
+        else:
+            enemy_cards_stats.append(extract_data_from_file(stats))
+    for stats in enemy_cards_file3:
+        if not stats:
+            break
+        else:
+            enemy_cards_stats.append(extract_data_from_file(stats))
+    for stats in enemy_cards_file4:
+        if not stats:
+            break
+        else:
+            enemy_cards_stats.append(extract_data_from_file(stats))
+    for stats in enemy_cards_file5:
+        if not stats:
+            break
+        else:
+            enemy_cards_stats.append(extract_data_from_file(stats))
 
     if debug is True:
+        print('Format: <file number> <begin line> <end line for stats for that card>')
         print('My cards found from set 1 ' + str(my_cards_file1))
         print('Found from set 2 ' + str(my_cards_file2))
         print('Found from set 3 ' + str(my_cards_file3))
@@ -86,6 +112,13 @@ def get_card_stats(all_cards, debug):
         print('Found from set 3 ' + str(enemy_cards_file3))
         print('Found from set 4 ' + str(enemy_cards_file4))
         print('Found from set 5 ' + str(enemy_cards_file5) + '\n')
+
+        print('MY EXTRACTED CARD STATS ' + str(my_cards_stats))
+        print('ENEMY EXTRACTED CARD STATS ' + str(enemy_cards_stats) + '\n')
+
+    # Return the stats of my cards and the enemies cards
+    all_stats = [my_cards_stats, enemy_cards_stats]
+    return all_stats
 
 
 # Put a number in for the file
@@ -126,10 +159,6 @@ def search_file_for_cards(file_num, card_codes, debug):
 
                 begin_stats = index - 16
                 end_stats = index + 17
-
-                if debug is True:
-                    print(code + ' found at line ' + str(index) + ' in set ' + str(file_num) + '. Stats begin at ' +
-                          str(begin_stats) + ', stats end at ' + str(end_stats))
 
             if code_found is True:
                 # Close file
