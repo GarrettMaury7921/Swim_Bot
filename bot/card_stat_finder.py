@@ -5,7 +5,7 @@ def get_card_stats(all_cards, debug):
     # Unpack the Card codes
     my_cards, enemy_cards, clean_codes = all_cards
 
-    # print(my_cards)
+    # print(my_cards) - Note: These cards are in order as they are in your hand in game
     # print(enemy_cards)
     # print(str(clean_codes) + '\n')
 
@@ -42,6 +42,37 @@ def get_card_stats(all_cards, debug):
     enemy_cards_file3 = search_file_for_cards(3, enemy_cards_clean, debug)
     enemy_cards_file4 = search_file_for_cards(4, enemy_cards_clean, debug)
     enemy_cards_file5 = search_file_for_cards(5, enemy_cards_clean, debug)
+
+    # Actually get the data from the file with MY cards
+    card_stats = ''
+    my_cards_stats = []
+    for stats in my_cards_file1:
+        if not stats:
+            break
+        else:
+            my_cards_stats.append(extract_data_from_file(stats))
+    for stats in my_cards_file2:
+        if not stats:
+            break
+        else:
+            my_cards_stats.append(extract_data_from_file(stats))
+    for stats in my_cards_file3:
+        if not stats:
+            break
+        else:
+            my_cards_stats.append(extract_data_from_file(stats))
+    for stats in my_cards_file4:
+        if not stats:
+            break
+        else:
+            my_cards_stats.append(extract_data_from_file(stats))
+    for stats in my_cards_file5:
+        if not stats:
+            break
+        else:
+            my_cards_stats.append(extract_data_from_file(stats))
+
+    print(my_cards_stats)
 
     if debug is True:
         print('My cards found from set 1 ' + str(my_cards_file1))
@@ -84,7 +115,7 @@ def search_file_for_cards(file_num, card_codes, debug):
         end_stats = 0
         code_found = False
 
-        # Search for the card in file1
+        # Search for the card in the specified file
         for line in file:
             index += 1
 
@@ -113,5 +144,59 @@ def search_file_for_cards(file_num, card_codes, debug):
 
 
 # Extract the data from the files where the codes were found
-def extract_data_from_file():
-    pass
+def extract_data_from_file(card_stats):
+    # Unpack the stats
+    file_num, begin_line, end_line = card_stats
+
+    # Open the files needed to search through to find the stats for each card in your hand, encoding
+    # because riot's a bum (at least when I tried to use json files :( )
+    if file_num == 1:
+        file = open(sys.path[0] + "/bot/card_assets/set1-en_us.txt", "r", encoding='utf-8')
+    elif file_num == 2:
+        file = open(sys.path[0] + "/bot/card_assets/set2-en_us.txt", "r", encoding='utf-8')
+    elif file_num == 3:
+        file = open(sys.path[0] + "/bot/card_assets/set3-en_us.txt", "r", encoding='utf-8')
+    elif file_num == 4:
+        file = open(sys.path[0] + "/bot/card_assets/set4-en_us.txt", "r", encoding='utf-8')
+    elif file_num == 5:
+        file = open(sys.path[0] + "/bot/card_assets/set5-en_us.txt", "r", encoding='utf-8')
+
+    # Attributes
+    index = 0
+    card_data = ''
+
+    # Search for the card in the specified file
+    for line in file:
+        index += 1
+
+        # If we have reached the beginning line
+        if index >= begin_line:
+
+            # Get rid of some unnecessary lines if we find any
+            # description line
+            # level up description line
+            # flavor text line
+            # and the Artist name line
+            if 'description' in line or 'levelupDescription' in line or 'flavorText' in line or 'artistName' in line:
+                continue
+
+            else:
+                # Add each line to the string
+                card_data += line
+
+            # If we have reached the ending line
+            if index == end_line:
+                # End the loop
+                break
+
+    # Close file
+    file.close()
+
+    # Cleanup the card_data
+    card_data = card_data.replace('\n', '')
+    # Get rid of all tabs and whitespace, then put it all together again
+    card_data = ''.join(card_data.split())
+
+    return card_data
+
+
