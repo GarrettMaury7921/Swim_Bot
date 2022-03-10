@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Swim_Bot initialization&#10;&#10;- The stats are brought from the card_finder.py to swim_bot.py&#10;- initializer.py is now threaded">
-      <change beforePath="$PROJECT_DIR$/bot/card_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/card_finder.py" afterDir="false" />
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="All_Stats 'None' checking and script cleaning&#10;&#10;- added if self.card_finder.all_stats is not None: to check if the stats are present or not">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/initializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/initializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/swim_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/swim_bot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +28,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="22QTTFsSaTJIlblnUIK4NvKVLqH" />
   <component name="ProjectLevelVcsManager">
@@ -353,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646879186276</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="All_Stats 'None' checking and script cleaning&#10;&#10;- added if self.card_finder.all_stats is not None: to check if the stats are present or not">
+      <created>1646880019091</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1646880019091</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -370,7 +382,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Runeterra Port Listener&#10;&#10;- Can be used to grab the current deck and card positions&#10;- Can be used with threading" />
     <MESSAGE value="Pre-Swim Bot Additions&#10;&#10;- Lots of improvements&#10;- Get gamestate from port listener&#10;- bot clicks on the play button after deck is selected&#10;- deck input has to be all caps" />
     <MESSAGE value="gitignore dead" />
     <MESSAGE value="gitignore working" />
@@ -395,6 +406,7 @@
     <MESSAGE value="Data Extraction for player's cards&#10;&#10;- Searches the .txt file for all the card data for each card in hand and in play" />
     <MESSAGE value="Data Extraction for enemies cards&#10;&#10;- Searches the .txt file for all the card data for each card in play on the enemies side" />
     <MESSAGE value="Swim_Bot initialization&#10;&#10;- The stats are brought from the card_finder.py to swim_bot.py&#10;- initializer.py is now threaded" />
-    <option name="LAST_COMMIT_MESSAGE" value="Swim_Bot initialization&#10;&#10;- The stats are brought from the card_finder.py to swim_bot.py&#10;- initializer.py is now threaded" />
+    <MESSAGE value="All_Stats 'None' checking and script cleaning&#10;&#10;- added if self.card_finder.all_stats is not None: to check if the stats are present or not" />
+    <option name="LAST_COMMIT_MESSAGE" value="All_Stats 'None' checking and script cleaning&#10;&#10;- added if self.card_finder.all_stats is not None: to check if the stats are present or not" />
   </component>
 </project>

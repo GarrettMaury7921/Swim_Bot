@@ -14,6 +14,7 @@ class Initializer:
         # Attributes
         self.debug = debug
         self.all_stats = None
+        self.all_cards = None
         # create a thread lock object
         self.lock = Lock()
 
@@ -63,8 +64,10 @@ class Initializer:
 
             # Get the stats from the card_finder to be referenced later in swim_bot
             # Stats have to be present
-            time.sleep(0.2)
-            if self.card_finder.all_stats is not None:
-                self.all_stats = self.card_finder.all_stats
+
+            # all_stats = [my_cards_stats, enemy_cards_stats]
+            self.all_stats = self.card_finder.all_stats
+            # all_cards = my_cards, enemy_cards, clean_codes
+            self.all_cards = self.card_finder.all_cards
 
             self.lock.release()
