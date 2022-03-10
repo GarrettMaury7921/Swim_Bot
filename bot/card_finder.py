@@ -6,7 +6,7 @@ from bot.card_stat_finder import get_card_stats
 # SHOWS CARDS IN PLAYER'S HAND IF YOU CAN SEE THEM
 
 
-def get_card_codes(positional_rectangles, debug):
+def get_card_codes(positional_rectangles):
 
     # Get the index of where the word 'CardID' is
     # CardID - 3 is where to start cutting
@@ -127,7 +127,7 @@ class CardFinder:
             self.lock.acquire()
 
             # Get the codes of every card, print them out if we're debugging
-            self.all_cards = get_card_codes(self.positional_rectangles, self.debug)
+            self.all_cards = get_card_codes(self.positional_rectangles)
 
             # Get the stats of every card from card_stat_finder.py
             self.all_stats = get_card_stats(self.all_cards, self.debug)

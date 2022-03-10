@@ -62,7 +62,9 @@ class Initializer:
             self.lock.acquire()
 
             # Get the stats from the card_finder to be referenced later in swim_bot
+            # Stats have to be present
             time.sleep(0.2)
-            self.all_stats = self.card_finder.all_stats
+            if self.card_finder.all_stats is not None:
+                self.all_stats = self.card_finder.all_stats
 
             self.lock.release()
