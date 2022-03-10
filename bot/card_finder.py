@@ -131,7 +131,6 @@ class CardFinder:
 
             # Get the stats of every card from card_stat_finder.py
             self.all_stats = get_card_stats(self.all_cards, self.debug)
-            print(self.all_stats)
 
             # Getting the cards is so fast, I have to sleep it for a while
             time.sleep(0.5)

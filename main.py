@@ -1,6 +1,7 @@
 from menus import Menus
 from screen_capturing import deck_detection
 from bot.initializer import Initializer
+from bot.swim_bot import Bot
 
 # This is the main driver code of the bot
 
@@ -14,4 +15,8 @@ DEBUGGING = False
 
 # Initializes all classes that run with the bot, finds cards and card stats
 bot_initializer = Initializer(DEBUGGING)
+# Stats the thread in the initializer that updates the stats that the card finder finds
+bot_initializer.start()
 
+# Put the stats in the swim_bot and initialize the bot script
+swim_bot = Bot(bot_initializer, DEBUGGING)

@@ -1,20 +1,28 @@
 import time
+from threading import Thread, Lock
 from bot.card_finder import CardFinder
 from port_listening.port_listener import PortListener
 
 
 class Initializer:
+    # threading properties
+    stopped = True
+    lock = None
+    card_finder = None
 
     def __init__(self, debug):
         # Attributes
         self.debug = debug
+        self.all_stats = None
+        # create a thread lock object
+        self.lock = Lock()
 
         print('Bot Initializer Started.')
         # Initialize the Card finder first
-        card_finder = CardFinder(debug)
+        self.card_finder = CardFinder(debug)
 
         # Initialize the port listener
-        listener = PortListener(card_finder)
+        listener = PortListener(self.card_finder)
 
         listener.start()
 
@@ -34,4 +42,27 @@ class Initializer:
         print('Waiting for cards to go in hand...')
         time.sleep(8)
         print('Activating Card Finder.')
-        card_finder.start()
+        self.card_finder.start()
+
+    # threading methods
+
+    def start(self):
+        self.stopped = False
+        t = Thread(target=self.run)
+        t.start()
+
+    def stop(self):
+        self.stopped = True
+
+    def run(self):
+        time.sleep(2)
+        print('Activating initializer thread for stats...')
+        while not self.stopped:
+            # lock the thread while updating the results
+            self.lock.acquire()
+
+            # Get the stats from the card_finder to be referenced later in swim_bot
+            time.sleep(0.2)
+            self.all_stats = self.card_finder.all_stats
+
+            self.lock.release()
