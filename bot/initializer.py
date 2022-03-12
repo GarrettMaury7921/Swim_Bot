@@ -8,15 +8,13 @@ class Initializer:
     # threading properties
     stopped = True
     lock = None
-    card_finder = None
 
     def __init__(self, debug):
         # Attributes
         self.debug = debug
-        self.all_stats = None
-        self.all_cards = None
-        self.updated_stats = None
-        self.updated_cards = None
+        self.all_stats = ''
+        self.all_cards = ''
+        self.card_finder = None
         # create a thread lock object
         self.lock = Lock()
 
@@ -69,10 +67,11 @@ class Initializer:
 
             # all_stats = [my_cards_stats, enemy_cards_stats]
             self.all_stats = self.card_finder.all_stats
-            print(self.all_stats)
+            # print(self.all_stats)
 
             # all_cards = my_cards, enemy_cards, clean_codes
             self.all_cards = self.card_finder.all_cards
-            print(self.all_cards)
+            # print(self.all_cards)
 
+            time.sleep(0.2)
             self.lock.release()
