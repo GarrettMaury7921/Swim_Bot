@@ -74,5 +74,5 @@ class Initializer:
             # print(self.all_cards)
 
             # RACE CONDITION - TRY ON OTHER COMP
-            time.sleep(0.2)
+            time.sleep(0.3)
             self.lock.release()

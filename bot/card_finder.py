@@ -134,5 +134,5 @@ class CardFinder:
 
             # Getting the cards is so fast, I have to sleep it for a while
             # RACE CONDITION - TRY ON OTHER COMP
-            time.sleep(0.2)
+            time.sleep(0.4)
             self.lock.release()
