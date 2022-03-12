@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Improved Data Extraction (Bug not fixed yet)&#10;&#10;- Data changes while the game is going in the initializer.py and not swim_bot.py">
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Fixed Data Extraction&#10;&#10;- Added Time.sleep(0.2) to initializer.py, all_stats are changing from the swim_bot thread when taken from initializer.py.&#10;- Pierson gave emotional support">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/initializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/initializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/swim_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/swim_bot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -379,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646961551273</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Fixed Data Extraction&#10;&#10;- Added Time.sleep(0.2) to initializer.py, all_stats are changing from the swim_bot thread when taken from initializer.py.&#10;- Pierson gave emotional support">
+      <created>1647045025504</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1647045025504</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -396,7 +401,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="gitignore working" />
     <MESSAGE value="gitignore update / card assets" />
     <MESSAGE value="Card Finder Class&#10;&#10;- Finds the cards during the match" />
     <MESSAGE value="Parsing through strings for finding card stats" />
@@ -421,6 +425,7 @@
     <MESSAGE value="All_Stats 'None' checking and script cleaning&#10;&#10;- added if self.card_finder.all_stats is not None: to check if the stats are present or not" />
     <MESSAGE value="Bug Fixing - Does not update cards in game to swim_bot.py (In progress)" />
     <MESSAGE value="Improved Data Extraction (Bug not fixed yet)&#10;&#10;- Data changes while the game is going in the initializer.py and not swim_bot.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved Data Extraction (Bug not fixed yet)&#10;&#10;- Data changes while the game is going in the initializer.py and not swim_bot.py" />
+    <MESSAGE value="Fixed Data Extraction&#10;&#10;- Added Time.sleep(0.2) to initializer.py, all_stats are changing from the swim_bot thread when taken from initializer.py.&#10;- Pierson gave emotional support" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Data Extraction&#10;&#10;- Added Time.sleep(0.2) to initializer.py, all_stats are changing from the swim_bot thread when taken from initializer.py.&#10;- Pierson gave emotional support" />
   </component>
 </project>

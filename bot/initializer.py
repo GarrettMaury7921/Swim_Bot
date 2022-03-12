@@ -73,5 +73,6 @@ class Initializer:
             self.all_cards = self.card_finder.all_cards
             # print(self.all_cards)
 
+            # RACE CONDITION - TRY ON OTHER COMP
             time.sleep(0.2)
             self.lock.release()

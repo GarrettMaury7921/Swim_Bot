@@ -133,5 +133,6 @@ class CardFinder:
             self.all_stats = get_card_stats(self.all_cards, self.debug)
 
             # Getting the cards is so fast, I have to sleep it for a while
+            # RACE CONDITION - TRY ON OTHER COMP
             time.sleep(0.2)
             self.lock.release()
