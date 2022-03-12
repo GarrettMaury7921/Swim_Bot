@@ -14,10 +14,9 @@ class Bot:
         self.bot_initializer = Initializer(debug)
         # Stats the thread in the initializer that updates the stats that the card finder finds
         self.bot_initializer.start()
+        self.active_deck = ''
 
         time.sleep(3)
-
-        self.get_card_stats()
 
     def get_card_stats(self):
         while True:
@@ -29,4 +28,8 @@ class Bot:
 
             print(all_stats)
             print(all_cards)
+
+    def print_active_deck(self):
+        self.active_deck = self.bot_initializer.listener.get_active_deck()
+        print(self.active_deck)
 

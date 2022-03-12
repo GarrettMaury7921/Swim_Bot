@@ -23,18 +23,18 @@ class Initializer:
         self.card_finder = CardFinder(debug)
 
         # Initialize the port listener
-        listener = PortListener(self.card_finder)
+        self.listener = PortListener(self.card_finder)
 
-        listener.start()
+        self.listener.start()
 
         # Wait until we are in game
         print('Waiting for a game to start...')
         while True:
             time.sleep(0.5)
-            if '"GameState":"Menus"' in listener.card_positions:
+            if '"GameState":"Menus"' in self.listener.card_positions:
                 # Not in game
                 continue
-            elif '"GameState":"InProgress"' in listener.card_positions:
+            elif '"GameState":"InProgress"' in self.listener.card_positions:
                 # We are in game, start up the bot
                 print('Game Started, SWIM_BOT ACTIVATED.')
                 break

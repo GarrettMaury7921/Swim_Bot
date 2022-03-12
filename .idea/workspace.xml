@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Small sleep tweak&#10;&#10;- Changed the values to different wavelengths to maybe reduce the race condition" />
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="get_card_stats method in swim_bot.py">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/initializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/initializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/swim_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/swim_bot.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -396,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647105469950</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="get_card_stats method in swim_bot.py">
+      <created>1647105880814</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1647105880815</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -413,7 +424,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Parsing through strings for finding card stats" />
     <MESSAGE value="Card Pool Update 2/12&#10;&#10;- Updated the .json files with the most up to date cards" />
     <MESSAGE value="Comment Update / Bug Fix&#10;&#10;- Fixed the card initializer from being initialized again&#10;- Easier code to understand with more comments to some files" />
     <MESSAGE value="2/22 Runeterra Card Update&#10;&#10;- New Expansion Yummers" />
@@ -438,6 +448,7 @@
     <MESSAGE value="Fixed Data Extraction&#10;&#10;- Added Time.sleep(0.2) to initializer.py, all_stats are changing from the swim_bot thread when taken from initializer.py.&#10;- Pierson gave emotional support" />
     <MESSAGE value="Possible Race Condition&#10;&#10;- Added some notes to the script where a race condition is occurring" />
     <MESSAGE value="Small sleep tweak&#10;&#10;- Changed the values to different wavelengths to maybe reduce the race condition" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small sleep tweak&#10;&#10;- Changed the values to different wavelengths to maybe reduce the race condition" />
+    <MESSAGE value="get_card_stats method in swim_bot.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="get_card_stats method in swim_bot.py" />
   </component>
 </project>
