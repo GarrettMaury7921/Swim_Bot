@@ -14,6 +14,8 @@ class Bot:
         # - initializer
         # - card finder
         # - port listener
+        # - window capture
+        # - number detector
 
         # Initializes all classes that run with the bot, finds cards, screen capturing and card stats
         self.bot_initializer = Initializer(debug)

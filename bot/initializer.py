@@ -5,6 +5,7 @@ from threading import Thread, Lock
 from bot.card_finder import CardFinder
 from port_listening.port_listener import PortListener
 from screen_capturing.window_capture import WindowCapture
+from screen_capturing.number_detector import NumberDetector
 
 
 class Initializer:
@@ -33,6 +34,9 @@ class Initializer:
         self.screenshot = None
         self.window_capture = WindowCapture()
 
+        # Initialize the number detector class
+        self.number_detector = NumberDetector(self.debug)
+
         # Wait until we are in game
         print('Waiting for a game to start...')
         while True:
@@ -52,6 +56,12 @@ class Initializer:
         self.card_finder.start()
         print('Activating Window Capturing.')
         self.window_capture.start()
+
+        # Wait for the window capture to catch up
+        sleep(3)
+        # Start the number detector
+        print('Activating Number Detector.')
+        self.number_detector.start()
 
     # threading methods
 
@@ -84,6 +94,13 @@ class Initializer:
 
             # WINDOW CAPTURE -- Get the current screenshot
             self.screenshot = self.window_capture.screenshot
+            # Keep the number detector updated with the latest screenshot
+            self.number_detector.update(self.screenshot)
+
+            # Sleep for a little bit to give the detector time to update and find the numbers
+            # Toying with this number can either make the output look like it's skipping or look more accurate
+            # ^ Mostly because it is probably moving too fast in terms of fps
+            sleep(0.1)
 
             # if we don't have a screenshot yet, don't run the code below this point yet
             if self.screenshot is None:

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Comment Updates">
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Window Capture activation in initializer.py class&#10;&#10;- For Health, Mana, and Spell mana capture while in game">
+      <change afterPath="$PROJECT_DIR$/screen_capturing/number_detector.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/card_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/card_finder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/initializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/initializer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/swim_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/swim_bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -423,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647200278052</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Window Capture activation in initializer.py class&#10;&#10;- For Health, Mana, and Spell mana capture while in game">
+      <created>1647207283204</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1647207283204</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -440,7 +446,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="2/22 Runeterra Card Update&#10;&#10;- New Expansion Yummers" />
     <MESSAGE value="Small Tweaks&#10;&#10;- Card finder method change, main is debugging with one method running" />
     <MESSAGE value="Card Update 3/1/2022&#10;&#10;- Updated the directories and added some comments for the card finder and port listener" />
     <MESSAGE value="CARD FINDER CHANGES&#10;&#10;- Can differentiate between enemy and player cards&#10;- Code is a lot cleaner and better" />
@@ -465,6 +470,7 @@
     <MESSAGE value="get_card_stats method in swim_bot.py" />
     <MESSAGE value="print_active_deck method in swim_bot.py&#10;&#10;- Print the player's active deck code, and all the card codes in that deck" />
     <MESSAGE value="Comment Updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comment Updates" />
+    <MESSAGE value="Window Capture activation in initializer.py class&#10;&#10;- For Health, Mana, and Spell mana capture while in game" />
+    <option name="LAST_COMMIT_MESSAGE" value="Window Capture activation in initializer.py class&#10;&#10;- For Health, Mana, and Spell mana capture while in game" />
   </component>
 </project>
