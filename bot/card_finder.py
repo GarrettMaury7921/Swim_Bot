@@ -121,7 +121,7 @@ class CardFinder:
         self.stopped = True
 
     def run(self):
-        print('Finding cards and card stats...')
+        print('Finding cards and card stats...' + '\n')
         while not self.stopped:
             # lock the thread while updating the results
             self.lock.acquire()

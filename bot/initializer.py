@@ -1,7 +1,10 @@
 import time
+import cv2 as cv
+from time import time, sleep
 from threading import Thread, Lock
 from bot.card_finder import CardFinder
 from port_listening.port_listener import PortListener
+from screen_capturing.window_capture import WindowCapture
 
 
 class Initializer:
@@ -22,15 +25,18 @@ class Initializer:
         # Initialize the Card finder first
         self.card_finder = CardFinder(debug)
 
-        # Initialize the port listener
+        # Initialize and start the port listener
         self.listener = PortListener(self.card_finder)
-
         self.listener.start()
+
+        # Initialize the window capture class
+        self.screenshot = None
+        self.window_capture = WindowCapture()
 
         # Wait until we are in game
         print('Waiting for a game to start...')
         while True:
-            time.sleep(0.5)
+            sleep(0.5)
             if '"GameState":"Menus"' in self.listener.card_positions:
                 # Not in game
                 continue
@@ -41,9 +47,11 @@ class Initializer:
 
         # Wait for cards to go in hand
         print('Waiting for cards to go in hand...')
-        time.sleep(8)
+        sleep(8)
         print('Activating Card Finder.')
         self.card_finder.start()
+        print('Activating Window Capturing.')
+        self.window_capture.start()
 
     # threading methods
 
@@ -56,7 +64,8 @@ class Initializer:
         self.stopped = True
 
     def run(self):
-        time.sleep(2)
+        sleep(2)
+        loop_time = time()
         print('Activating initializer thread for stats...')
         while not self.stopped:
             # lock the thread while updating the results
@@ -73,6 +82,36 @@ class Initializer:
             self.all_cards = self.card_finder.all_cards
             # print(self.all_cards)
 
+            # WINDOW CAPTURE -- Get the current screenshot
+            self.screenshot = self.window_capture.screenshot
+
+            # if we don't have a screenshot yet, don't run the code below this point yet
+            if self.screenshot is None:
+                # RACE CONDITION - TRY ON OTHER COMP
+                sleep(0.3)
+                self.lock.release()
+                continue
+
+            # IF TRUE: Show output on a separate screen
+            if self.debug is True:
+
+                # resize the windows
+                output_image = cv.resize(self.screenshot, (900, 500))
+
+                # Display detection image
+                cv.imshow('Matches', output_image)
+
+                # debug the loop rate
+                print('FPS {}'.format(1 / (time() - loop_time)))
+                loop_time = time()
+
+                # press 'q' with the output window focused to exit.
+                # waits 1 ms every loop to process key presses
+                key = cv.waitKey(1)
+                if key == ord('q'):
+                    cv.destroyAllWindows()
+                    break
+
             # RACE CONDITION - TRY ON OTHER COMP
-            time.sleep(0.3)
+            sleep(0.3)
             self.lock.release()
