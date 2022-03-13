@@ -10,12 +10,18 @@ class Bot:
     bot_initializer = None
 
     def __init__(self, debug):
+        # ALL THREADS CURRENTLY RUNNING
+        # - initializer
+        # - card finder
+        # - port listener
+
         # Initializes all classes that run with the bot, finds cards and card stats
         self.bot_initializer = Initializer(debug)
         # Stats the thread in the initializer that updates the stats that the card finder finds
         self.bot_initializer.start()
         self.active_deck = ''
 
+        # Sleep to get the other threads to catch up
         time.sleep(3)
 
     def get_card_stats(self):

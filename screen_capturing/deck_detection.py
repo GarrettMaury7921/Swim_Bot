@@ -95,7 +95,7 @@ def detect_deck(deck, debug):
     # Click on the play button
     play()
 
-    # Stop everything
+    # Stop all window and capture threads
     word_detector.stop()
     window_capture.stop()
     cv.destroyAllWindows()
