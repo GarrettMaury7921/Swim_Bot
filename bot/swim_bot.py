@@ -1,5 +1,6 @@
 # ACCESSIBILITY SETTING IN LOR
 # Click to Action
+# DISABLE MOTION
 import time
 from bot.initializer import Initializer
 

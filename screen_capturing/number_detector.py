@@ -64,8 +64,11 @@ class NumberDetector:
 
                 # 2560x1440 setup
                 if str(self.screensize) == '(2560, 1440)':
+                    # If the data is near the enemy health part of the screen
                     if 341 <= x <= 397 and 502 <= y <= 559:
-                        print('Enemy health? ' + str(number))
+                        # You can't have more than 20 HP
+                        if int(number) <= 20:
+                            print('Enemy health? ' + str(number))
                     # HEALTH - TOP LEFT IS WHERE X AND Y IS
                     # enemy
                     # right side down (397, 559)
