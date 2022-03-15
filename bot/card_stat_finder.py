@@ -99,22 +99,22 @@ def get_card_stats(all_cards, debug):
         else:
             enemy_cards_stats.append(extract_data_from_file(stats))
 
-    if debug is True:
-        print('Format: <file number> <begin line> <end line for stats for that card>')
-        print('My cards found from set 1 ' + str(my_cards_file1))
-        print('Found from set 2 ' + str(my_cards_file2))
-        print('Found from set 3 ' + str(my_cards_file3))
-        print('Found from set 4 ' + str(my_cards_file4))
-        print('Found from set 5 ' + str(my_cards_file5) + '\n')
-
-        print('Enemy cards found from set 1 ' + str(enemy_cards_file1))
-        print('Found from set 2 ' + str(enemy_cards_file2))
-        print('Found from set 3 ' + str(enemy_cards_file3))
-        print('Found from set 4 ' + str(enemy_cards_file4))
-        print('Found from set 5 ' + str(enemy_cards_file5) + '\n')
-
-        print('MY EXTRACTED CARD STATS ' + str(my_cards_stats))
-        print('ENEMY EXTRACTED CARD STATS ' + str(enemy_cards_stats) + '\n')
+    # if debug is True:
+    #     print('Format: <file number> <begin line> <end line for stats for that card>')
+    #     print('My cards found from set 1 ' + str(my_cards_file1))
+    #     print('Found from set 2 ' + str(my_cards_file2))
+    #     print('Found from set 3 ' + str(my_cards_file3))
+    #     print('Found from set 4 ' + str(my_cards_file4))
+    #     print('Found from set 5 ' + str(my_cards_file5) + '\n')
+    #
+    #     print('Enemy cards found from set 1 ' + str(enemy_cards_file1))
+    #     print('Found from set 2 ' + str(enemy_cards_file2))
+    #     print('Found from set 3 ' + str(enemy_cards_file3))
+    #     print('Found from set 4 ' + str(enemy_cards_file4))
+    #     print('Found from set 5 ' + str(enemy_cards_file5) + '\n')
+    #
+    #     print('MY EXTRACTED CARD STATS ' + str(my_cards_stats))
+    #     print('ENEMY EXTRACTED CARD STATS ' + str(enemy_cards_stats) + '\n')
 
     # Return the stats of my cards and the enemies cards
     all_stats = [my_cards_stats, enemy_cards_stats]

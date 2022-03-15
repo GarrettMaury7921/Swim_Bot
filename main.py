@@ -1,3 +1,6 @@
+import time
+
+from libraries.controls import get_cursor_position
 from menus import Menus
 from screen_capturing import deck_detection
 from bot.swim_bot import Bot
@@ -6,6 +9,8 @@ from bot.swim_bot import Bot
 
 DEBUGGING = True
 
+# time.sleep(3)
+# print(get_cursor_position())
 # Initialize the resolution and ask the user for an action for the bot to take
 # initialize_menu = Menus()
 # if initialize_menu.action == '1':

@@ -94,13 +94,12 @@ class Initializer:
 
             # WINDOW CAPTURE -- Get the current screenshot
             self.screenshot = self.window_capture.screenshot
+            # Convert to Grayscale and then black and white
+            self.screenshot = cv.cvtColor(self.screenshot, cv.COLOR_BGR2GRAY)
+            thresh, image_black = cv.threshold(self.screenshot, 170, 255, cv.THRESH_BINARY)
+            self.screenshot = image_black
             # Keep the number detector updated with the latest screenshot
             self.number_detector.update(self.screenshot)
-
-            # Sleep for a little bit to give the detector time to update and find the numbers
-            # Toying with this number can either make the output look like it's skipping or look more accurate
-            # ^ Mostly because it is probably moving too fast in terms of fps
-            sleep(0.1)
 
             # if we don't have a screenshot yet, don't run the code below this point yet
             if self.screenshot is None:
@@ -108,6 +107,11 @@ class Initializer:
                 sleep(0.3)
                 self.lock.release()
                 continue
+
+            # Sleep for a little bit to give the detector time to update and find the numbers
+            # Toying with this number can either make the output look like it's skipping or look more accurate
+            # ^ Mostly because it is probably moving too fast in terms of fps
+            sleep(0.2)
 
             # IF TRUE: Show output on a separate screen
             if self.debug is True:
@@ -119,7 +123,7 @@ class Initializer:
                 cv.imshow('Matches', output_image)
 
                 # debug the loop rate
-                print('FPS {}'.format(1 / (time() - loop_time)))
+                print('(Reduced from sleeping) FPS {}'.format(1 / (time() - loop_time)))
                 loop_time = time()
 
                 # press 'q' with the output window focused to exit.
