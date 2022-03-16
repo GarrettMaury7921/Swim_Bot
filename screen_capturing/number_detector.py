@@ -68,26 +68,38 @@ class NumberDetector:
                     if 341 <= x <= 397 and 512 <= y <= 559:
                         # You can't have more than 20 HP
                         if int(number) <= 20:
-                            print('Enemy health? ' + str(number))
+                            print('Enemy Health: ' + str(number))
 
                     # If the data is near the ALLY HEALTH part of the screen
-                    if 321 <= x <= 397 and 808 <= y <= 898:
+                    if 351 <= x <= 397 and 799 <= y <= 884:
                         if int(number) <= 20:
-                            print('Ally health? ' + str(number))
+                            print('Ally Health: ' + str(number))
+
+                    # If the data is near the ENEMY MANA part of the screen
+                    if 2099 <= x <= 2151 and 486 <= y <= 533:
+                        # No more mana than 10
+                        if int(number) <= 10:
+                            print('Enemy Mana: ' + str(number))
+
+                    # If the data is near the ALLY MANA part of the screen
+                    if 2099 <= x <= 2171 and 825 <= y <= 860:
+                        # No more mana than 10
+                        if int(number) <= 10:
+                            print('Ally Mana: ' + str(number))
 
                     # HEALTH - TOP LEFT IS WHERE X AND Y IS
                     # enemy
                     # right side down (397, 559)
                     # left side up (361, 522)
                     # ally
-                    # right side down (452, 898)
-                    # left side up (376, 828)
+                    # right side down (445, 854)
+                    # left side up (389, 819)
 
                     # MANA
-                    # left up enemy (2123, 539)
-                    # right down enemy (2163, 583)
-                    # left up ally (2120, 851)
-                    # right down ally (2162, 900)
+                    # left up enemy (2099, 476)
+                    # right down enemy (2181, 543)
+                    # left up ally (2107, 825)
+                    # right down ally (2173, 860)
 
                     # spell mana
                     # left up enemy (2184, 490)
@@ -98,6 +110,6 @@ class NumberDetector:
                 # Debugging = Drawing
                 if self.debug is True:
                     # Draw rectangles around the words
-                    cv.rectangle(self.screenshot, (x, y), (x + w, y + h), (0, 255, 0), 3)
-                    cv.putText(self.screenshot, number, (x, y - 16), cv.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 2)
+                    cv.rectangle(self.screenshot, (x, y), (x + w, y + h), (255, 255, 255), 3)
+                    cv.putText(self.screenshot, number, (x, y - 16), cv.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 2)
 

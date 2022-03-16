@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Health Above 20 Bugfix&#10;&#10;- Fixed a bug where the number detection would put the health above 20 HP, we don't accept values over 20 bc it's not possible in the game">
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Improved Health Finder&#10;&#10;- Improved the back and white threshold&#10;- Can return the ally health as well now">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/initializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/initializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screen_capturing/number_detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen_capturing/number_detector.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,13 +85,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639768817914</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Finding Main Menu with dimensions">
-      <created>1640732014779</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1640732014779</updated>
     </task>
     <task id="LOCAL-00005" summary="Clickable Buttons take you to the AI menu&#10;&#10;- uses pyautogui to click the buttons">
       <created>1640739025365</created>
@@ -428,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647306851306</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Improved Health Finder&#10;&#10;- Improved the back and white threshold&#10;- Can return the ally health as well now">
+      <created>1647381920603</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1647381920604</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -445,7 +446,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Swim_Bot Tweaks&#10;&#10;- Main menu can be found with new menu&#10;- Faster bot&#10;- More comments&#10;- Ready to test and move forward with stat finding" />
     <MESSAGE value="Debug Additions&#10;&#10;- Printing out the cards in the game now happens when you switch the debug flag to true in main.py" />
     <MESSAGE value="Better Card formatting data&#10;&#10;- Card stat finder now has clean card codes it can sort out from the card finder" />
     <MESSAGE value="json loading&#10;&#10;- loading stats from json card files" />
@@ -470,6 +470,7 @@
     <MESSAGE value="number_detector.py while in game&#10;&#10;- Detects numbers on the board&#10;- Need to extract certain numbers on the screen (position wise)&#10;- Need to return them to swim_bot.py afterwards" />
     <MESSAGE value="HEALTH DETECTOR&#10;&#10;- Detects the current enemy HP by using pytesseract&#10;- Only works for 1440p currently&#10;- Changed debug layout for easier window capture debugging for now" />
     <MESSAGE value="Health Above 20 Bugfix&#10;&#10;- Fixed a bug where the number detection would put the health above 20 HP, we don't accept values over 20 bc it's not possible in the game" />
-    <option name="LAST_COMMIT_MESSAGE" value="Health Above 20 Bugfix&#10;&#10;- Fixed a bug where the number detection would put the health above 20 HP, we don't accept values over 20 bc it's not possible in the game" />
+    <MESSAGE value="Improved Health Finder&#10;&#10;- Improved the back and white threshold&#10;- Can return the ally health as well now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved Health Finder&#10;&#10;- Improved the back and white threshold&#10;- Can return the ally health as well now" />
   </component>
 </project>
