@@ -63,29 +63,43 @@ class NumberDetector:
                     i]
 
                 # 2560x1440 setup
+                # May be a good idea to put 0 for mana values if they end up not returning anything after a while
                 if str(self.screensize) == '(2560, 1440)':
                     # If the data is near the ENEMY HEALTH part of the screen
                     if 341 <= x <= 397 and 512 <= y <= 559:
-                        # You can't have more than 20 HP
-                        if int(number) <= 20:
+                        # You can't have more than 20 HP and is not 0
+                        if int(number) <= 20 and int(number) != 0:
                             print('Enemy Health: ' + str(number))
 
                     # If the data is near the ALLY HEALTH part of the screen
-                    if 351 <= x <= 397 and 799 <= y <= 884:
-                        if int(number) <= 20:
+                    if 341 <= x <= 387 and 799 <= y <= 884:
+                        # You can't have more than 20 HP and is not 0
+                        if int(number) <= 20 and int(number) != 0:
                             print('Ally Health: ' + str(number))
 
                     # If the data is near the ENEMY MANA part of the screen
-                    if 2099 <= x <= 2151 and 486 <= y <= 533:
+                    if 2090 <= x <= 2151 and 486 <= y <= 533:
                         # No more mana than 10
                         if int(number) <= 10:
                             print('Enemy Mana: ' + str(number))
 
                     # If the data is near the ALLY MANA part of the screen
-                    if 2099 <= x <= 2171 and 825 <= y <= 860:
+                    if 2090 <= x <= 2168 and 790 <= y <= 873:
                         # No more mana than 10
                         if int(number) <= 10:
                             print('Ally Mana: ' + str(number))
+
+                    # If the data is near the ENEMY SPELL MANA part of the screen
+                    if 2140 <= x <= 2221 and 420 <= y <= 540:
+                        # No more spell mana than 3
+                        if int(number) <= 3:
+                            print('Enemy Spell Mana: ' + str(number))
+
+                    # If the data is near the ALLY SPELL MANA part of the screen
+                    if 2150 <= x <= 2221 and 878 <= y <= 947:
+                        # No more spell mana than 3
+                        if int(number) <= 3:
+                            print('Ally Spell Mana: ' + str(number))
 
                     # HEALTH - TOP LEFT IS WHERE X AND Y IS
                     # enemy
@@ -98,14 +112,14 @@ class NumberDetector:
                     # MANA
                     # left up enemy (2099, 476)
                     # right down enemy (2181, 543)
-                    # left up ally (2107, 825)
-                    # right down ally (2173, 860)
+                    # left up ally (2113, 814)
+                    # right down ally (2168, 863)
 
                     # spell mana
-                    # left up enemy (2184, 490)
-                    # right down enemy (2214, 527)
-                    # up left ally (2182, 918)
-                    # up down ally (2216, 949)
+                    # left up enemy (2180, 477)
+                    # right down enemy (2218, 507)
+                    # up left ally (2183, 909)
+                    # up down ally (2221, 927)
 
                 # Debugging = Drawing
                 if self.debug is True:
