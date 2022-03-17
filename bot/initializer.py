@@ -96,8 +96,11 @@ class Initializer:
             self.screenshot = self.window_capture.screenshot
             # Convert to Grayscale and then black and white
             self.screenshot = cv.cvtColor(self.screenshot, cv.COLOR_BGR2GRAY)
+            # Notes: For Health and Spell Mana, 200 is good
+            # All round: 191 is ok
             thresh, image_black = cv.threshold(self.screenshot, 191, 255, cv.THRESH_BINARY)
             self.screenshot = image_black
+
             # Keep the number detector updated with the latest screenshot
             self.number_detector.update(self.screenshot)
 
@@ -123,7 +126,7 @@ class Initializer:
                 cv.imshow('Matches', output_image)
 
                 # debug the loop rate
-                print('(Reduced from sleeping) FPS {}'.format(1 / (time() - loop_time)))
+                # print('(Reduced from sleeping) FPS {}'.format(1 / (time() - loop_time)))
                 loop_time = time()
 
                 # press 'q' with the output window focused to exit.

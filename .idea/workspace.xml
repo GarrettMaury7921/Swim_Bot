@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Improved Health and Mana Finder&#10;&#10;- Improved health and mana values for all players">
+    <list default="true" id="6784837a-2951-4c74-a8c2-f9c4f451b9e0" name="Changes" comment="Spell Mana Finder&#10;&#10;- can detect enemy and player spell mana">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/initializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/initializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screen_capturing/number_detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/screen_capturing/number_detector.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,13 +85,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639768817914</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Window Capture class&#10;&#10;- Captures what's happening on the current window&#10;- For some reason, trying to capture just the client will not work, so the screen will have to do&#10;- Needs Multithreading">
-      <created>1640741791981</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1640741791981</updated>
     </task>
     <task id="LOCAL-00007" summary="Text Detection&#10;&#10;- Detects Letters and puts boxes around them&#10;- Uses OpenCV and PyTesseract&#10;- Some improvements regarding the menus and main as well">
       <created>1640811861898</created>
@@ -427,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647389099606</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Spell Mana Finder&#10;&#10;- can detect enemy and player spell mana">
+      <created>1647472860538</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1647472860538</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -444,7 +446,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Better Card formatting data&#10;&#10;- Card stat finder now has clean card codes it can sort out from the card finder" />
     <MESSAGE value="json loading&#10;&#10;- loading stats from json card files" />
     <MESSAGE value="TXT Replacements&#10;&#10;- replaced json files with txt files&#10;- fixed a bug with formatting card codes in card_finder.py" />
     <MESSAGE value="Card Code formatting&#10;&#10;- in &quot;cardCode&quot;: &quot;010100101&quot; format (with space)&#10;- Can find codes in card directory (txt file)" />
@@ -469,6 +470,7 @@
     <MESSAGE value="Health Above 20 Bugfix&#10;&#10;- Fixed a bug where the number detection would put the health above 20 HP, we don't accept values over 20 bc it's not possible in the game" />
     <MESSAGE value="Improved Health Finder&#10;&#10;- Improved the back and white threshold&#10;- Can return the ally health as well now" />
     <MESSAGE value="Improved Health and Mana Finder&#10;&#10;- Improved health and mana values for all players" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved Health and Mana Finder&#10;&#10;- Improved health and mana values for all players" />
+    <MESSAGE value="Spell Mana Finder&#10;&#10;- can detect enemy and player spell mana" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spell Mana Finder&#10;&#10;- can detect enemy and player spell mana" />
   </component>
 </project>

@@ -7,7 +7,7 @@ from bot.swim_bot import Bot
 
 # This is the main driver code of the bot
 
-DEBUGGING = False
+DEBUGGING = True
 
 # time.sleep(3)
 # print(get_cursor_position())

@@ -78,13 +78,13 @@ class NumberDetector:
                             print('Ally Health: ' + str(number))
 
                     # If the data is near the ENEMY MANA part of the screen
-                    if 2090 <= x <= 2151 and 486 <= y <= 533:
+                    if 2090 <= x <= 2158 and 476 <= y <= 533:
                         # No more mana than 10
                         if int(number) <= 10:
                             print('Enemy Mana: ' + str(number))
 
                     # If the data is near the ALLY MANA part of the screen
-                    if 2090 <= x <= 2168 and 790 <= y <= 873:
+                    if 2090 <= x <= 2158 and 780 <= y <= 823:
                         # No more mana than 10
                         if int(number) <= 10:
                             print('Ally Mana: ' + str(number))
@@ -96,7 +96,7 @@ class NumberDetector:
                             print('Enemy Spell Mana: ' + str(number))
 
                     # If the data is near the ALLY SPELL MANA part of the screen
-                    if 2150 <= x <= 2221 and 878 <= y <= 947:
+                    if 2137 <= x <= 2221 and 909 <= y <= 947:
                         # No more spell mana than 3
                         if int(number) <= 3:
                             print('Ally Spell Mana: ' + str(number))
