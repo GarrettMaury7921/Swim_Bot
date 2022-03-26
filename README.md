@@ -28,19 +28,19 @@ Probably the best designed class in this project. The game spits data out of a l
 This directory is used when in the main menu and when you're in game. The window_capture class is used multiple times and basically uses window's commands to take screenshots quickly and put them together to make kind of a video recording. It does not save the pictures anywhere on your computer but other classes such as the word_detector will look at these screenshots very quickly and find letters and numbers to collect data to return (Such as Health in game or the name of the deck you want to play). The number detector and the word detector are very similar. One finds numbers on screen in various places depending on your monitor while the word detector finds words while you're selecting a deck.
 
 ### All Used External Libraries In This Project
-import random
-import time
-import pyautogui
-import cv2 as cv (OpenCV)
-from threading import Thread, Lock
-from pytesseract import pytesseract, Output (For word/number detection)
-import numpy as np
-import win32con
-import win32gui
-import win32ui
-import sleep
-import requests
-import ctypes
-import win32api
-import sys
+import random,
+import time,
+import pyautogui,
+import cv2 as cv (OpenCV),
+from threading import Thread, Lock,
+from pytesseract import pytesseract, Output (For word/number detection),
+import numpy as np,
+import win32con,
+import win32gui,
+import win32ui,
+import sleep,
+import requests,
+import ctypes,
+import win32api,
+import sys,
 
